@@ -47,6 +47,13 @@
 				Field::make('text', 'crb_valulte_ru', __('Valute ru'))
 					->set_width(30),
 
+				Field::make('text', 'crb_language_en', __('language en'))
+					->set_width(30),
+				Field::make('text', 'crb_language_ro', __('language ro'))
+					->set_width(30),
+				Field::make('text', 'crb_language_ru', __('language ru'))
+					->set_width(30),
+
 				Field::make('text', 'crb_basket_ru', __('Basket ru'))
 					->set_width(30),
 				Field::make('text', 'crb_basket_ro', __('Basket ro'))

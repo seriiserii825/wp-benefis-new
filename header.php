@@ -45,14 +45,15 @@
                                     </label>
                                 </li>
                                 <li>
-                                    <label><i class="fa fa-cog"></i><?php echo esc_html__('Валюта', 'benefis'); ?>:
+                                    <label><i class="fa fa-cog"></i>
+                                        <?php echo carbon_get_theme_option('crb_valulte'.get_lang()); ?>:
                                     </label>
                                     <span class="currenty"><?php echo do_shortcode('[woocommerce_currency_switcher_drop_down_box]'); ?></span>
                                 </li>
                                 <li>
                                     <div class="language-wpglobus">
                                         <label> <i class="fa fa-globe"></i>
-											<?php echo esc_html__('Language', 'benefis'); ?>: </label>
+											<?php echo carbon_get_theme_option('crb_language'.get_lang()); ?>: </label>
                                         <div class="select">
 											<?php if (!dynamic_sidebar('wpglobus')): ?>
                                                 <h4>language widget</h4>
