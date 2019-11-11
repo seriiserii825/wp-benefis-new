@@ -1200,16 +1200,18 @@ span.amount {
 .product-loop {
 	margin-top: 23px;
 }
-
+body.single-product {
+	overflow: visible;
+}
 .single-product {
 	border: 1px solid #ededed;
 	border-radius: 0;
-	overflow: hidden;
 	padding: 10px;
 	position: relative;
 	transition: all 0.3s ease 0s;
 	background: #fff;
 	margin-top: 12px;
+	overflow: hidden;
 }
 
 .single-product:hover {

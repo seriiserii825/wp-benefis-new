@@ -237,4 +237,9 @@ jQuery( document ).ready(function( $ ) {
         });
     };
     wpgisGallery();
+
+    let renameSearchForm = function () {
+
+    };
+    renameSearchForm();
 });

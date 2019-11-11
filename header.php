@@ -7,10 +7,6 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<?php wp_head(); ?>
-    <!-- Favicon
-============================================ -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
-
     <!-- google font CSS
  ============================================ -->
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
@@ -21,7 +17,7 @@
 
 </head>
 
-<body>
+<body <?php body_class(); ?>>
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please
     <a href="http://browsehappy.com/">upgrade your browser
