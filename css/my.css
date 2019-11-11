@@ -5768,3 +5768,9 @@ span.required {
 		margin-bottom: 20px;
 	}
 }
+.woocommerce a.button {
+	padding: 0;
+}
+.shopping-cart .buttons .button {
+	padding: 10px 15px;
+}

@@ -26,3 +26,4 @@
 <?php if (!is_single()): ?>
     </div>
 <?php endif; ?>
+

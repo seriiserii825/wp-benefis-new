@@ -162,15 +162,15 @@
 						?>
                         <a href="<?php echo $cart_url; ?>">
                             <span>
-                               <?php echo esc_html__('Basket', 'benefis'); ?> (<?php echo WC()->cart->get_cart_contents_count(); ?>)
+                               <?php echo carbon_get_theme_option('crb_basket'.get_lang()); ?> (<?php echo WC()->cart->get_cart_contents_count(); ?>)
                             </span>
                         </a>
                         <div class="restrain small-cart-content">
-                            <p class="total"> <?php echo esc_html__('Sum', 'benefis'); ?>:
+                            <p class="total"> <?php echo carbon_get_theme_option('crb_summ'.get_lang()); ?>:
                                 <span class="amount">155 mdl</span>
                             </p>
                             <p class="buttons">
-                                <a href="<?php echo $cart_url; ?>" class="button"><?php echo esc_html__('To cart', 'benefis'); ?></a>
+                                <a href="<?php echo $cart_url; ?>" class="button"><?php echo carbon_get_theme_option('crb_to_cart'.get_lang()); ?></a>
                             </p>
                         </div>
                     </div>

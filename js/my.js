@@ -236,18 +236,18 @@ jQuery( document ).ready(function( $ ) {
             }, 400);
         });
     };
-    wpgisGallery();
+    // wpgisGallery();
 
     let renameSearchForm = function () {
         let inputSearc = $('.search-box input[type="search"]');
         let searchBtn = $('.search-box button[type="submit"]');
 
         if($('body').hasClass('_en')){
-           inputSearc.attr('placeholder', 'Cautarea produselor...');
-           searchBtn.text('Cauta');
-        }else if($('body').hasClass('_ro')){
             inputSearc.attr('placeholder', 'Find a product ...');
             searchBtn.text('Find');
+        }else if($('body').hasClass('_ro')){
+            inputSearc.attr('placeholder', 'Cautarea produselor...');
+            searchBtn.text('Cauta');
         }
     };
     renameSearchForm();
