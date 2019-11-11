@@ -140,11 +140,6 @@
                             <?php if(!dynamic_sidebar('sidebar-search')): ?>
                                 <h1>Место для виджета поиска</h1>
                             <?php endif; ?>
-
-<!--                            <form action="#">-->
-<!--                                <input type="text" class="form-control input-sm" maxlength="64" name="s" placeholder="Введите поисковой запрос...">-->
-<!--                                <button type="submit">Поиск</button>-->
-<!--                            </form>-->
                         </div>
                     </div>
                 </div>
@@ -167,7 +162,13 @@
                         </a>
                         <div class="restrain small-cart-content">
                             <p class="total"> <?php echo carbon_get_theme_option('crb_summ'.get_lang()); ?>:
-                                <span class="amount">155 mdl</span>
+                                <span class="amount">
+                                    <?php
+                                    global $woocommerce;
+                                    $total = $woocommerce->cart->get_cart_total();
+                                    echo $total;
+                                    ?>
+                                </span>
                             </p>
                             <p class="buttons">
                                 <a href="<?php echo $cart_url; ?>" class="button"><?php echo carbon_get_theme_option('crb_to_cart'.get_lang()); ?></a>
