@@ -17,7 +17,7 @@
 
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class( get_lang() ); ?>>
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please
     <a href="http://browsehappy.com/">upgrade your browser
