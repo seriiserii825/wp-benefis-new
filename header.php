@@ -93,10 +93,10 @@
                         <nav>
                             <ul>
                                 <li>
-                                    <a href="#">Вход</a>
+                                    <a href="#"><?php echo carbon_get_theme_option('crb_enter'.get_lang()); ?></a>
                                 </li>
                                 <li>
-                                    <a class="lastbdr" href="#">Регистрация</a>
+                                    <a class="lastbdr" href="#"><?php echo carbon_get_theme_option('crb_registration'.get_lang()); ?></a>
                                 </li>
                             </ul>
                         </nav>

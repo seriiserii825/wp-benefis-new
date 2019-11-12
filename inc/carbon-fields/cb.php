@@ -74,6 +74,20 @@
 					->set_width(30),
 				Field::make('text', 'crb_to_cart_en', __('crb_to_cart_en'))
 					->set_width(30),
+
+				Field::make('text', 'crb_enter_en', __('crb_enter_en'))
+					->set_width(30),
+				Field::make('text', 'crb_enter_ro', __('crb_enter_ro'))
+					->set_width(30),
+				Field::make('text', 'crb_enter_ru', __('crb_enter_ru'))
+					->set_width(30),
+
+				Field::make('text', 'crb_registration_en', __('crb_registration_en'))
+					->set_width(30),
+				Field::make('text', 'crb_registration_ro', __('crb_registration_ro'))
+					->set_width(30),
+				Field::make('text', 'crb_registration_ru', __('crb_registration_ru'))
+					->set_width(30),
 			));
 	}
 	
