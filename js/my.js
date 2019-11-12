@@ -236,7 +236,7 @@ jQuery( document ).ready(function( $ ) {
             }, 400);
         });
     };
-    // wpgisGallery();
+    wpgisGallery();
 
     let renameSearchForm = function () {
         let inputSearc = $('.search-box input[type="search"]');
