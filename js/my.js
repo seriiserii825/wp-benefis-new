@@ -253,4 +253,42 @@ jQuery( document ).ready(function( $ ) {
         }
     };
     renameSearchForm();
+
+    let convertInchToCm = function () {
+        let resultInches = $('.converter__result--inches');
+        let inputInches = $('#js-inches');
+
+        $('#js-convert-to-cm').on('click', function(){
+            let inputVal =  inputInches.val();
+
+            if(inputVal !== '' ){
+                let result = (inputVal * 2.54).toFixed(2);
+                if(result === NaN){
+                    resultInches.text();
+                }else{
+                    resultInches.text(result);
+                }
+            }
+        });
+    };
+    convertInchToCm();
+
+    let convertCmToInch = function () {
+        let resultCm = $('.converter__result--cm');
+        let inputCm = $('#js-cm');
+
+        $('#js-convert-to-inches').on('click', function(){
+            let inputVal =  inputCm.val();
+
+            if(inputVal !== '' ){
+                let result = (inputVal / 0.39).toFixed(2);
+                if(result === NaN){
+                    resultCm.text();
+                }else{
+                    resultCm.text(result);
+                }
+            }
+        });
+    };
+    convertCmToInch();
 });

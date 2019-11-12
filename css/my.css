@@ -5532,6 +5532,7 @@ span.required {
 	display: none;
 	width: 260px;
 	background: #b32927;
+	z-index: 10000;
 }
 
 .main-menu ul > li:hover ul {
@@ -5847,11 +5848,14 @@ span.required {
 .tablepress-id-1 tr.row-2 td,
 .tablepress-id-1 tr.row-7 td {
 	text-align: center;
-	background: #E2D3DF;
+	color: white;
+	background: #b32927;
 }
 .tablepress-id-1 .column-1,
 .tablepress-id-1 tr.row-1 td{
-	background: #E2D3DF;
+	color: white;
+	border-right: 1px solid;
+	background: #b32927;
 }
 .converter {
 	display: flex;
