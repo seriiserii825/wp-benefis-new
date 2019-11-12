@@ -328,7 +328,7 @@ body {
 .header-top ul li {
 	display: inline-block;
 	position: relative;
-	margin-right: 15px;
+	margin-right: 10px;
 	color: #666;
 }
 
@@ -5498,13 +5498,12 @@ span.required {
 
 .social_list {
 	float: left;
-	margin-top: 5px;
+	margin-top: 10px;
 }
 
 .social_list i {
-	font-size: 35px;
+	font-size: 25px;
 	color: #fff;
-
 }
 
 .category-menu-list .cat-left-drop-menu {
@@ -5887,4 +5886,16 @@ span.required {
 }
 .sizes-titles__item {
 	flex: 1;
+}
+.logo-area a {
+	display: block;
+}
+.pdf-list {
+	float: left;
+	margin-top: 12px;
+	margin-left: 10px;
+}
+.pdf-list a {
+	text-decoration: underline;
+	color: white;
 }
