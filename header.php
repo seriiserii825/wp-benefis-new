@@ -105,6 +105,8 @@
             </div>
         </div>
     </div>
+    <?php
+    ?>
     <div class="header-menu">
         <div class="container-fluid">
             <div class="row">
@@ -165,8 +167,8 @@
                                 <span class="amount">
                                     <?php
                                     global $woocommerce;
-                                    $total = $woocommerce->cart->get_cart_total();
-                                    echo $total;
+//                                    $total = $woocommerce->cart->get_cart_total();
+//                                    echo $total;
                                     ?>
                                 </span>
                             </p>
