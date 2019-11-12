@@ -291,4 +291,19 @@ jQuery( document ).ready(function( $ ) {
         });
     };
     convertCmToInch();
+
+    let currentMenuItemSubmenu = function () {
+        let url = location.href;
+        let subMenuLinks = document.querySelectorAll('.main-menu ul li ul li a');
+
+        for(let i = 0; i < subMenuLinks.length; i++){
+            let href = subMenuLinks[i].getAttribute('href');
+            if(href === url){
+            subMenuLinks[i].parentElement.parentElement.parentElement.parentElement.parentElement.classList.add('current-menu-item');
+            }
+
+        }
+    };
+    currentMenuItemSubmenu();
 });
+
