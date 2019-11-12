@@ -5678,24 +5678,8 @@ span.required {
 .category-menu-list .menu-item-has-children {
 	position: relative;
 }
-
-.category-menu-list .menu-item-has-children:after {
-	content: '+';
-	right: 9px;
-	top: 12px;
-	position: absolute;
-	color: #fff;
-	font-weight: 500;
-	font-size: 20px;
-	cursor: pointer;
-}
-
-.category-menu-list .menu-item-has-children.open:after {
-	content: '-';
-}
-
-.category-menu-list .menu-item-has-children > .cat-left-drop-menu {
-	display: none;
+.category-menu-list ul li ul li a:hover {
+	color: #b32927;
 }
 
 .category-menu-list .menu-item-has-children > .cat-left-drop-menu.open {
@@ -5765,7 +5749,7 @@ span.required {
 
 .bs-main {
 	display: grid;
-	grid-template-columns: 260px 1fr;
+	grid-template-columns: 260px 900px;
 	grid-gap: 30px;
 }
 

@@ -3,8 +3,6 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Benefisshop</title>
-    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<?php wp_head(); ?>
     <!-- google font CSS
@@ -44,7 +42,9 @@
                                     <label><i class="fa fa-cog"></i>
                                         <?php echo carbon_get_theme_option('crb_valulte'.get_lang()); ?>:
                                     </label>
-                                    <span class="currenty"><?php echo do_shortcode('[woocommerce_currency_switcher_drop_down_box]'); ?></span>
+                                    <span class="currenty">
+                                        <?php echo do_shortcode('[woocommerce_currency_switcher_drop_down_box]'); ?>
+                                    </span>
                                 </li>
                                 <li>
                                     <div class="language-wpglobus">
@@ -167,8 +167,8 @@
                                 <span class="amount">
                                     <?php
                                     global $woocommerce;
-//                                    $total = $woocommerce->cart->get_cart_total();
-//                                    echo $total;
+                                    $total = $woocommerce->cart->total;
+                                    echo $total .' '. get_woocommerce_currency_symbol();
                                     ?>
                                 </span>
                             </p>
