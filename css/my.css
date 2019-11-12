@@ -5666,6 +5666,16 @@ span.required {
 .language-wpglobus .select .fa {
 	display: none;
 }
+.language-wpglobus .name,
+.language-wpglobus img {
+	display: none;
+}
+.language-wpglobus .wpglobus-selector-link {
+	color: white;
+}
+.language-wpglobus .wpglobus-current-language {
+	color: #77a464;
+}
 
 .single-drop {
 	padding-top: 10px;
