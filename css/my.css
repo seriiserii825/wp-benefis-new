@@ -5333,7 +5333,8 @@ span.required {
 }
 
 .main-menu {
-	display: inline-block;
+	display: table;
+	margin: 0 auto;
 }
 
 .header-bottom {
@@ -5521,6 +5522,10 @@ span.required {
 	position: relative;
 }
 
+.main-menu ul > li.current-menu-item {
+	background: #e44f4f;
+}
+
 .main-menu ul > li a:hover {
 	cursor: pointer;
 }
@@ -5547,6 +5552,7 @@ span.required {
 	padding: 15px 20px;
 	min-height: auto;
 	line-height: 24px;
+	border-bottom: 1px solid white;
 }
 
 .woocommerce table.shop_table td.product-thumbnail {
