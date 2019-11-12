@@ -236,7 +236,9 @@ jQuery( document ).ready(function( $ ) {
             }, 400);
         });
     };
-    wpgisGallery();
+    if($('body').hasClass('single-product')){
+        wpgisGallery();
+    }
 
     let renameSearchForm = function () {
         let inputSearc = $('.search-box input[type="search"]');
