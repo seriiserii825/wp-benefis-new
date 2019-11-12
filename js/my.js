@@ -205,7 +205,7 @@ jQuery( document ).ready(function( $ ) {
 
     /* Custom */
 
-    $('.menu-item-has-children > a').on('click', function(){
+    $('.category-menu-list .menu-item-has-children > a').on('click', function(){
         $(this).parent().toggleClass('open');
         $(this).parent().find('.cat-left-drop-menu').toggleClass("open");
         return false;

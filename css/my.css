@@ -107,9 +107,11 @@ img {
 	max-width: 100%;
 	height: auto;
 }
+
 img[align="left"] {
 	margin-right: 10px;
 }
+
 img[align="right"] {
 	margin-left: 10px;
 }
@@ -797,7 +799,7 @@ span.amount {
 	color: #fff;
 }
 
-.main-menu ul li:hover a {
+.main-menu ul li:hover > a {
 	background: #e44f4f;
 	color: #fff;
 }
@@ -1206,6 +1208,7 @@ span.amount {
 .product-loop {
 	margin-top: 23px;
 }
+
 body.single-product {
 	border: none;
 	border-radius: 0;
@@ -1216,6 +1219,7 @@ body.single-product {
 	margin-top: 0;
 	overflow: visible;
 }
+
 .single-product {
 	border: 1px solid #ededed;
 	border-radius: 0;
@@ -5502,7 +5506,7 @@ span.required {
 
 }
 
-.cat-left-drop-menu {
+.category-menu-list .cat-left-drop-menu {
 	position: static !important;
 	width: 100% !important;
 	border-bottom: none !important;
@@ -5511,6 +5515,37 @@ span.required {
 	border-top: 1px solid #eee !important;
 	visibility: visible !important;
 	opacity: 1 !important;
+}
+
+.main-menu ul > li {
+	position: relative;
+}
+
+.main-menu ul > li a:hover {
+	cursor: pointer;
+}
+
+.main-menu ul > li ul {
+	position: absolute;
+	top: 50px;
+	left: 0;
+	display: none;
+	width: 260px;
+	background: #b32927;
+}
+
+.main-menu ul > li:hover ul {
+	display: block;
+}
+
+.main-menu ul > li ul li {
+	width: 100%;
+}
+
+.main-menu ul > li ul li a {
+	padding: 15px 20px;
+	min-height: auto;
+	line-height: 24px;
 }
 
 .woocommerce table.shop_table td.product-thumbnail {
@@ -5633,11 +5668,11 @@ span.required {
 	padding-top: 12px;
 }
 
-.menu-item-has-children {
+.category-menu-list .menu-item-has-children {
 	position: relative;
 }
 
-.menu-item-has-children:after {
+.category-menu-list .menu-item-has-children:after {
 	content: '+';
 	right: 9px;
 	top: 12px;
@@ -5648,15 +5683,15 @@ span.required {
 	cursor: pointer;
 }
 
-.menu-item-has-children.open:after {
+.category-menu-list .menu-item-has-children.open:after {
 	content: '-';
 }
 
-.menu-item-has-children > .cat-left-drop-menu {
+.category-menu-list .menu-item-has-children > .cat-left-drop-menu {
 	display: none;
 }
 
-.menu-item-has-children > .cat-left-drop-menu.open {
+.category-menu-list .menu-item-has-children > .cat-left-drop-menu.open {
 	display: block;
 }
 
@@ -5679,13 +5714,16 @@ span.required {
 .language-wpglobus .select .fa {
 	display: none;
 }
+
 .language-wpglobus .name,
 .language-wpglobus img {
 	display: none;
 }
+
 .language-wpglobus .wpglobus-selector-link {
 	color: white;
 }
+
 .language-wpglobus .wpglobus-current-language {
 	color: #77a464;
 }
@@ -5748,15 +5786,18 @@ span.required {
 	height: 46px;
 	border: none;
 }
-.header-area .dgwt-wcas-sf-wrapp button.dgwt-wcas-search-submit  {
+
+.header-area .dgwt-wcas-sf-wrapp button.dgwt-wcas-search-submit {
 	font-size: 16px;
 	height: 47px;
 	color: white;
 	background: #b32927 none repeat scroll 0 0;
 }
+
 .dgwt-wcas-sf-wrapp .dgwt-wcas-search-submit:before {
 	display: none;
 }
+
 .slider.wpgis-slider-nav {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -5765,18 +5806,21 @@ span.required {
 }
 
 @media screen and (max-width: 1200px) {
-	.bs-main	{
+	.bs-main {
 		display: block;
 	}
+
 	.bs-sidebar {
 		max-width: 400px;
 		height: auto;
 	}
 }
+
 @media screen and (max-width: 992px) {
 	.woocommerce div.product div.images {
 		float: none;
 	}
+
 	.woocommerce div.product div.summary {
 		float: none;
 	}
@@ -5791,9 +5835,62 @@ span.required {
 		margin-bottom: 20px;
 	}
 }
+
 .woocommerce a.button {
 	padding: 0;
 }
+
 .shopping-cart .buttons .button {
 	padding: 10px 15px;
+}
+
+.tablepress-id-1 tr.row-2 td,
+.tablepress-id-1 tr.row-7 td {
+	text-align: center;
+	background: #E2D3DF;
+}
+.tablepress-id-1 .column-1,
+.tablepress-id-1 tr.row-1 td{
+	background: #E2D3DF;
+}
+.converter {
+	display: flex;
+	margin-bottom: 20px;
+	padding: 20px 0;
+	width: 100%;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+
+.converter__item {
+	flex: 1;
+}
+.converter__item:first-child {
+	margin-right: 40px;
+}
+.converter__item br {
+	display: none;
+}
+.converter__item input {
+	display: block;
+}
+.converter .converter__result {
+	display: inline-block;
+	width: 80px;
+	height: 24px;
+	border: 1px solid #ccc;
+}
+.converter__content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.sizes-titles {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 15px;
+}
+.sizes-titles__item {
+	flex: 1;
 }
