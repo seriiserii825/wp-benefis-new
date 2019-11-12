@@ -9,7 +9,7 @@
 
 ?>
 
-<div class="col-md-7 col-sm-7 col-xs-12" style="margin-top: 40px;">
+<div style="margin-top: 40px;">
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <div class="entry-content">
 			<?php
