@@ -5759,6 +5759,11 @@ span.required {
 	grid-gap: 20px;
 }
 
+.bs-products-loops .single-product {
+	margin-top: 0;
+	padding: 0;
+}
+
 .product-loop {
 	margin-bottom: 0;
 	margin-top: 0;
@@ -5766,10 +5771,6 @@ span.required {
 
 .bs-content {
 	padding-top: 35px;
-}
-
-.single-product {
-	margin-top: 0;
 }
 
 .header-area .header-menu .dgwt-wcas-sf-wrapp input[type=search].dgwt-wcas-search-input {
@@ -6027,4 +6028,9 @@ span.required {
 }
 .slider-video .slick-dots button {
 	display: none;
+}
+
+.woocommerce span.onsale {
+	top: .2em;
+	left: .2em;
 }
