@@ -5,7 +5,7 @@
 
 get_header();
 ?>
-    <div class="slider">
+    <div class="slider" id="js-slider">
         <div class="slider_video_parent">
             <span></span>
             <div class="slider-video" id="js-slider-video">
@@ -28,7 +28,7 @@ get_header();
                    autoplay="" loop="" muted="" width="1280" height="720"></video>
         </div>
 
-        <button id="unmuteButton">Unmuted</button>
+        <a href="#" id="js-muted-button" class="muted-btn"><i class="fa fa-volume-off"></i></a>
     </div>
 
     <div class="container">

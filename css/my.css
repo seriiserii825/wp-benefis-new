@@ -5899,6 +5899,70 @@ span.required {
 	text-decoration: underline;
 	color: white;
 }
+.slider {
+	position: relative;
+}
+.muted-btn {
+	position: absolute;
+	right: 80px;
+	bottom: 40px;
+	padding: 8px 0;
+	width: 80px;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 20px;
+	color: white;
+	background: transparent;
+	border: 2px solid white;
+	box-sizing: border-box;
+	transition: all .5s;
+	z-index: 100000;
+}
+.muted-btn:active,
+.muted-btn:focus,
+.muted-btn:visited {
+	color: white;
+}
+.muted-btn:hover{
+	color: #000;
+}
+.muted-btn::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 52%;
+	height: 100%;
+	background: #fff;
+	z-index: -1;
+	transform: scaleX(0);
+	transition: transform .5s;
+	transform-origin: left;
+}
+.muted-btn:hover::before {
+	transform: scaleX(1);
+	transition: transform .5s;
+	transform-origin: right;
+}
+.muted-btn::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 52%;
+	height: 100%;
+	background: #fff;
+	z-index: -1;
+	transform: scaleX(0);
+	transition: transform .5s;
+	transform-origin: right;
+}
+.muted-btn:hover::after {
+	transform: scaleX(1);
+	transition: transform .5s;
+	transform-origin: left;
+}
 .slider-video {
 	position: absolute;
 	top: 0;
