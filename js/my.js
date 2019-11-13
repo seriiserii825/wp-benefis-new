@@ -305,5 +305,14 @@ jQuery( document ).ready(function( $ ) {
         }
     };
     currentMenuItemSubmenu();
+
+    let videoSlider = function () {
+        $('#js-slider-video').slick({
+            dots: true,
+            arrows: false,
+            fade: true
+        });
+    };
+    videoSlider();
 });
 

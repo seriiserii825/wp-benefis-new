@@ -1,24 +1,34 @@
 <?php
-	/**
-	 * The template for displaying all pages
-	 *
-	 * This is the template that displays all pages by default.
-	 * Please note that this is the WordPress construct of pages
-	 * and that other 'pages' on your WordPress site may use a
-	 * different template.
-	 *
-	 * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
-	 *
-	 * @package benefis
-	 */
+/**
+ * Template Name: Main page
+ */
 
-	get_header();
+get_header();
 ?>
     <div class="slider">
         <div class="slider_video_parent">
             <span></span>
-            <video src="http://benefis.myihor.ru//images/video/10000000_690038651457564_3112166903667890767_n.mp4" class="videoslider" autoplay="" loop="" muted="" width="1280" height="720"></video>
+            <div class="slider-video" id="js-slider-video">
+                <?php $slider = carbon_get_post_meta(453, 'crb_slider'); ?>
+                <?php foreach($slider as $slider_item): ?>
+                    <div class="slider-video__item">
+                        <div class="slider-video__content">
+                            <div class="slider-video__img">
+                                <?php echo $slider_item['image']; ?>
+                            </div>
+                            <div class="slider-video__text">
+                                <h2><?php echo $slider_item['title'.get_lang()]; ?></h2>
+                                <p><?php echo $slider_item['text'.get_lang()]; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+            <video src="<?php echo get_template_directory_uri() . '/video/intro_video.mp4'; ?>" class="videoslider"
+                   autoplay="" loop="" muted="" width="1280" height="720"></video>
         </div>
+
+        <button id="unmuteButton">Unmuted</button>
     </div>
 
     <div class="container">
@@ -28,7 +38,7 @@
 			<?php do_action('woocommerce_before_main_content'); ?>
 
 			<?php
-				$products = new WP_Query(['post_type' => 'product', 'posts_per_page' => 6]);
+			$products = new WP_Query(['post_type' => 'product', 'posts_per_page' => 6]);
 			?>
 
 			<?php if ($products->have_posts()): ?>
@@ -51,4 +61,4 @@
         </div>
     </div>
 <?php
-	get_footer();
+get_footer();

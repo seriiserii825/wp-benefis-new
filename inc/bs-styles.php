@@ -4,6 +4,7 @@
 	{
 		wp_enqueue_style('benefis-style', get_stylesheet_uri());
 		wp_enqueue_style('benefis-magnific-style', get_stylesheet_directory_uri() . '/css/magnific-popup.css');
+		wp_enqueue_style('benefis-slick-style', get_stylesheet_directory_uri() . '/libs/slick/slick.css');
 		wp_enqueue_style('benefis-custom-style', get_stylesheet_directory_uri() . '/css/my.css');
 
 		wp_enqueue_script('benefis-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true);
@@ -27,6 +28,7 @@
 		wp_enqueue_script('benefis-wow-js', get_template_directory_uri() . '/js/wow.js', array('jquery'), '', true);
 		wp_enqueue_script('benefis-chosen.jquery.min-js', get_template_directory_uri() . '/js/chosen.jquery.min.js', array('jquery'), '', true);
 		wp_enqueue_script('benefis-plugins-js', get_template_directory_uri() . '/js/plugins.js', array('jquery'), '', true);
+		wp_enqueue_script('benefis-slick-js', get_template_directory_uri() . '/libs/slick/slick.min.js', array('jquery'), '', true);
 		wp_enqueue_script('benefis-my-js', get_template_directory_uri() . '/js/my.js', array('jquery'), '', true);
 
 		wp_enqueue_script('benefis-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true);

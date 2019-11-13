@@ -5899,3 +5899,68 @@ span.required {
 	text-decoration: underline;
 	color: white;
 }
+.slider-video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100000;
+}
+.slider-video .slick-list {
+	top: 140px;
+}
+.slider-video__content {
+	display: flex;
+	margin: 0 auto;
+	width: 1000px;
+}
+.slider-video__img {
+	flex: 0 0 200px;
+	margin-right: 20px;
+}
+.slider-video__img svg {
+	max-width: 100%;
+	fill: white;
+}
+.slider-video__text {
+	flex: 1;
+}
+.slider-video h2 {
+	display: table;
+	margin-bottom: 30px;
+	font-size: 50px;
+	font-weight: 500;
+	text-transform: uppercase;
+	color: #fff;
+	border-bottom: 4px solid #fff;
+}
+.slider-video p {
+	max-width: 800px;
+	font-size: 24px;
+	line-height: 28px;
+	color: white;
+	text-shadow: 1px 1px rgba(0,0,0, 0.6);
+}
+.slider-video .slick-dots {
+	position: absolute;
+	bottom: 40px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	display: flex;
+	align-items: center;
+}
+.slider-video .slick-dots li.slick-active {
+	background: white;
+}
+.slider-video .slick-dots li {
+	margin-right: 6px;
+	width: 30px;
+	height: 10px;
+	border: 2px solid white;
+	border-radius: 18px;
+	cursor: pointer;
+}
+.slider-video .slick-dots button {
+	display: none;
+}
