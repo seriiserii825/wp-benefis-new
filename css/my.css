@@ -6029,8 +6029,14 @@ span.required {
 .slider-video .slick-dots button {
 	display: none;
 }
-
 .woocommerce span.onsale {
 	top: .2em;
 	left: .2em;
 }
+
+@media screen and (min-width: 1200px) {
+	.container {
+		width: 1280px;
+	}
+}
+
