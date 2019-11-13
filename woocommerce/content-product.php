@@ -27,6 +27,7 @@
 
 <?php //do_action('woocommerce_before_shop_loop_item'); ?>
 
+
 <div class="product-loop">
     <div class="single-product">
         <?php do_action('woocommerce_before_shop_loop_item'); ?>
