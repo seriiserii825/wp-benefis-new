@@ -5809,12 +5809,14 @@ span.required {
 
 @media screen and (max-width: 1200px) {
 	.bs-main {
-		display: block;
+		display: flex;
+		flex-direction: column;
 	}
 
 	.bs-sidebar {
 		max-width: 400px;
 		height: auto;
+		order: 2;
 	}
 }
 
@@ -6094,4 +6096,64 @@ span.required {
 	line-height: 20px;
 	margin-top: 0;
 	font-weight: bold;
+}
+.woocommerce div.product span.onsale {
+	left: 112px;
+}
+
+@media screen and (min-width: 600px) {
+	.woocommerce div.product div.images {
+		display: flex;
+	}
+	.woocommerce div.product .images .wpgis-slider-for {
+		flex: 1;
+		order: 2;
+	}
+	.woocommerce div.product .images .wpgis-slider-nav {
+		flex: 0 0 100px;
+		order: 1;
+	}
+	.woocommerce div.product .slider.wpgis-slider-nav {
+		position: relative;
+		display: block;
+		margin-right: 10px;
+	}
+	.woocommerce div.product .images.more-height .wpgis-slider-nav {
+		height: 542px;
+		overflow-y: scroll;
+	}
+	.woocommerce div.product .slider.wpgis-slider-nav li {
+		margin-bottom: 10px;
+	}
+
+	.woocommerce div.product .images.more-height .wpgis-slider-nav::-webkit-scrollbar-button {
+		background-repeat:no-repeat;
+		width:5px;
+		height:0px
+	}
+
+	.woocommerce div.product .images.more-height .wpgis-slider-nav::-webkit-scrollbar-track {
+		background-color:#ecedee
+	}
+
+	.woocommerce div.product .images.more-height .wpgis-slider-nav::-webkit-scrollbar-thumb {
+		-webkit-border-radius: 0px;
+		border-radius: 0px;
+		background-color:#9F0004;
+	}
+
+	.woocommerce div.product .images.more-height .wpgis-slider-nav::-webkit-scrollbar-thumb:hover{
+		background-color:#9F0004;
+	}
+
+	.woocommerce div.product .images.more-height .wpgis-slider-nav::-webkit-resizer{
+		background-repeat:no-repeat;
+		width:4px;
+		height:0px
+	}
+
+	.woocommerce div.product .images.more-height .wpgis-slider-nav::-webkit-scrollbar{
+		width: 4px;
+	}
+
 }

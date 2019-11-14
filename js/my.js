@@ -344,14 +344,14 @@ jQuery(document).ready(function ($) {
 	};
 	unmutedVideo();
 
-	// $("#js-muted-button").on("click", function() {
-	// 	alert('ok');
-	//     // var isMuted =
-	//     //     $(this)
-	//     //         .toggleClass("button_voice__mute button_voice__noisy")
-	//     //         .hasClass("button_voice__mute");
-	//     //
-	//     // $('#js-slider video').prop("muted", isMuted);
-	// });
+	let countThumbGallery = function () {
+		if($(window).width() > 600){
+			let countThumb = $('#wpgis-gallery li').length;
+			if(countThumb > 5){
+				$('.woocommerce div.product div.images').addClass('more-height');
+			}
+		}
+	};
+	countThumbGallery();
 });
 
