@@ -127,14 +127,13 @@ jQuery(document).ready(function($)
 			}, 20 );
 		});
 
-		$('[data-fancybox="product-gallery"]').fancybox({
-			slideShow  : true,
-			fullScreen : false,
-			transitionEffect: "slide",
-			arrows: true,
-			thumbs : false,
-			infobar : false,
-		});
-
+		// $('[data-fancybox="product-gallery"]').fancybox({
+		// 	slideShow  : true,
+		// 	fullScreen : false,
+		// 	transitionEffect: "slide",
+		// 	arrows: true,
+		// 	thumbs : false,
+		// 	infobar : false,
+		// });
 	}
 });

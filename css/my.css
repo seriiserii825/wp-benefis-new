@@ -6157,3 +6157,34 @@ span.required {
 	}
 
 }
+.product-single-type {
+	margin-bottom: 0;
+	font-weight: bold;
+}
+.woocommerce div.product .price .price__item {
+	display: block;
+}
+.woocommerce div.product .price .price__title {
+	display: inline-block;
+	width: 90px;
+	color: #666;
+}
+.product-single-currency {
+	display: flex;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #ededed;
+}
+.product-single-currency__title {
+	display: inline-block;
+	margin-right: 4px;
+}
+#alg_currency_selector br {
+	display: none;
+}
+#alg_currency_selector a {
+	margin-right: 6px;
+	font-weight: bold;
+}
+#alg_currency_selector a.active {
+	color: #b32927;
+}

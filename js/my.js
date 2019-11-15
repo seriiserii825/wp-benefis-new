@@ -1,6 +1,10 @@
 jQuery(document).ready(function ($) {
 	"use strict";
 
+	$('a.wpgis-popup').on('click', function () {
+		alert('ok');
+	});
+
 	/*---------------------
 	 tooltip
 	--------------------- */
@@ -353,5 +357,15 @@ jQuery(document).ready(function ($) {
 		}
 	};
 	countThumbGallery();
+
+	let activeCurrencySymbol = function () {
+		let currencySymbol = $('#js-product-single-currency').attr('data-currency');
+		let currencyItem = $('#alg_currency_selector #alg_currency_'+currencySymbol);
+		currencyItem.addClass('active');
+
+		$('#alg_currency_selector').prepend('<span>Currency:</span>');
+	};
+	activeCurrencySymbol();
+
 });
 
