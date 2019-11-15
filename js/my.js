@@ -315,8 +315,8 @@ jQuery(document).ready(function ($) {
 			dots: true,
 			arrows: false,
 			fade: true,
-			autoplay: true,
-			infinite: true,
+			// autoplay: true,
+			// infinite: true,
 		});
 	};
 	videoSlider();
