@@ -4,7 +4,6 @@ Template Name: Cart
 */
 get_header();
 ?>
-
 <style>
 .entry-header{display:none;}
 </style>

@@ -32,7 +32,7 @@ $benefis_attr_arr = array_reverse($benefis_attr_arr);
 if ($benefis_attr_arr[0]) {
 	$benefis_first_attr = $benefis_attr_arr[0];
 }
-if ($benefis_attr_arr[1]) {
+if (isset($benefis_attr_arr[1])) {
 	$benefis_second_attr = $benefis_attr_arr[1];
 }
 

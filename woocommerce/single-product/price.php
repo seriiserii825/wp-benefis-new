@@ -33,7 +33,7 @@ if($product_type_arr[0]){
 	$product_adult = $product_type_arr[0];
 }
 
-if($product_type_arr[1]){
+if(isset($product_type_arr[1])){
 	$product_child = $product_type_arr[1];
 }
 
@@ -58,9 +58,9 @@ if ($regular_price == "") {
 	$adult_regular_price = (int)$available_variations[0]['display_regular_price'].get_woocommerce_currency_symbol();
 	//$available_variations можно использовать в цикле, чтобы получить значения всех вариаций
 
-	if ($available_variations[1]['display_price']) {
+	if (isset($available_variations[1]['display_price'])) {
 		$child_price = (int)$available_variations[1]['display_price'].get_woocommerce_currency_symbol();
-	} elseif ($available_variations[1]['display_regular_price']) {
+	} elseif (isset($available_variations[1]['display_regular_price'])) {
 		$child_regular_price = (int)$available_variations[1]['display_regular_price'].get_woocommerce_currency_symbol();
 	}
 }
