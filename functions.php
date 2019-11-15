@@ -242,5 +242,28 @@ class Child_Wrap extends Walker_Nav_Menu
 		$indent = str_repeat("\t", $depth);
 		$output .= "$indent</ul></div></div>\n";
 	}
+
 }
+function remove_image_zoom_support() {
+	remove_theme_support( 'wc-product-gallery-zoom' );
+}
+add_action( 'wp', 'remove_image_zoom_support', 100 );
+
+//add_filter( 'woocommerce_single_product_zoom_options', 'custom_single_product_zoom_options', 10, 3 );
+//function custom_single_product_zoom_options( $zoom_options ) {
+//	// Changing the magnification level:
+//	$zoom_options = array (
+//		'url' => false,
+//		'callback' => false,
+//		'target' => false,
+//		'duration' => 120, // Transition in milli seconds (default is 120)
+//		'on' => 'click', // other options: grab, click, toggle (default is mouseover)
+//		'touch' => false, // enables a touch fallback
+//		'onZoomIn' => false,
+//		'onZoomOut' => false,
+//		'magnify' => 0, // Zoom magnification: (default is 1  |  float number between 0 and 1)
+//	);
+//
+//	return $zoom_options;
+//}
 

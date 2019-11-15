@@ -6191,3 +6191,6 @@ span.required {
 /*.woocommerce .product .images, .woocommerce-page .product .images {*/
 /*	pointer-events: none;*/
 /*}*/
+/*.single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger {*/
+/*	display: none;*/
+/*}*/
