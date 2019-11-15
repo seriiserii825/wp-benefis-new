@@ -362,10 +362,9 @@ jQuery(document).ready(function ($) {
 		let currencySymbol = $('#js-product-single-currency').attr('data-currency');
 		let currencyItem = $('#alg_currency_selector #alg_currency_'+currencySymbol);
 		currencyItem.addClass('active');
-
-		$('#alg_currency_selector').prepend('<span>Currency:</span>');
 	};
 	activeCurrencySymbol();
+
 
 });
 

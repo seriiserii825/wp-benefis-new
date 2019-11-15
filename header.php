@@ -94,8 +94,7 @@
                     </ul>
                     <ul class="pdf-list">
                         <li>
-                            <a target="_blank"
-                               href="<?php echo carbon_get_theme_option('crb_pdf_file'); ?>"><?php echo carbon_get_theme_option('crb_pdf_title' . get_lang()); ?></a>
+                            <a target="_blank" href="<?php echo carbon_get_theme_option('crb_pdf_file'); ?>"><?php echo carbon_get_theme_option('crb_pdf_title' . get_lang()); ?></a>
                         </li>
                     </ul>
                     <div class="single-menu">

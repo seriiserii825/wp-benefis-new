@@ -6188,3 +6188,6 @@ span.required {
 #alg_currency_selector a.active {
 	color: #b32927;
 }
+/*.woocommerce .product .images, .woocommerce-page .product .images {*/
+/*	pointer-events: none;*/
+/*}*/

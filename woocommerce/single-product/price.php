@@ -73,19 +73,19 @@ if ($regular_price == "") {
 	<?php if ($product_child): ?>
         <span class="price__item">
             <span class="price__title"><?php echo $product_child ?></span>
-            <span class="price__value">- <?php echo $child_price; ?></span>
+            <span class="price__value"> <?php echo $child_price; ?></span>
         </span>
     <?php endif; ?>
 
     <?php if ($product_adult): ?>
         <span class="price__item">
             <span class="price__title"><?php echo $product_adult ?></span>
-            <span class="price__value">- <?php echo $adult_price; ?></span>
+            <span class="price__value"> <?php echo $adult_price; ?></span>
         </span>
     <?php endif; ?>
 </p>
 
 <div class="product-single-currency" id="js-product-single-currency" data-currency="<?php echo get_woocommerce_currency(); ?>">
-    <span class="product-single-currency__title">Currency: </span><?php echo do_shortcode('[woocommerce_currency_switcher_link_list] ') ?>
+    <?php echo do_shortcode('[woocommerce_currency_switcher_link_list] ') ?>
 </div>
 
