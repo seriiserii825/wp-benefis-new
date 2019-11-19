@@ -94,7 +94,8 @@
                     </ul>
                     <ul class="pdf-list">
                         <li>
-                            <a target="_blank" href="<?php echo carbon_get_theme_option('crb_pdf_file'); ?>"><?php echo carbon_get_theme_option('crb_pdf_title' . get_lang()); ?></a>
+                            <a target="_blank"
+                               href="<?php echo carbon_get_theme_option('crb_pdf_file'); ?>"><?php echo carbon_get_theme_option('crb_pdf_title' . get_lang()); ?></a>
                         </li>
                     </ul>
                     <div class="single-menu">
@@ -178,9 +179,10 @@
                             <p class="total"> <?php echo carbon_get_theme_option('crb_summ' . get_lang()); ?>:
                                 <span class="amount">
                                     <?php
-                                        global $woocommerce;
-                                        $totalamount = $woocommerce->cart->get_cart_total();
-                                        echo $totalamount;
+                                    $currency_symbol = get_woocommerce_currency_symbol();
+                                    global $woocommerce;
+                                    $totalamount = $woocommerce->cart->cart_contents_total . ' '. $currency_symbol ;
+                                    echo $totalamount;
                                     ?>
                                 </span>
                             </p>
