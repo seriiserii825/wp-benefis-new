@@ -20,7 +20,6 @@ if (!defined('ABSPATH')) {
 }
 
 global $product;
-vardump($product->get_price_html());
 ?>
 
 <?php

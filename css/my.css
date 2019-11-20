@@ -5482,7 +5482,8 @@ span.required {
 }
 
 .woocommerce-variation-price {
-	float: left;
+	/*float: left;*/
+	margin-bottom: 8px;
 	padding-right: 92px;
 	padding-top: 10px;
 }
@@ -6097,6 +6098,7 @@ span.required {
 	margin-top: 0;
 	font-weight: bold;
 }
+
 .woocommerce div.product span.onsale {
 	left: 112px;
 }
@@ -6105,86 +6107,104 @@ span.required {
 	.woocommerce div.product div.images {
 		display: flex;
 	}
+
 	.woocommerce div.product .images .wpgis-slider-for {
 		flex: 1;
 		order: 2;
 	}
+
 	.woocommerce div.product .images .wpgis-slider-nav {
 		flex: 0 0 100px;
 		order: 1;
 	}
+
 	.woocommerce div.product .slider.wpgis-slider-nav {
 		position: relative;
 		display: block;
 		margin-right: 10px;
 	}
+
 	.woocommerce div.product .images.more-height .wpgis-slider-nav {
 		height: 542px;
 		overflow-y: scroll;
 	}
+
 	.woocommerce div.product .slider.wpgis-slider-nav li {
 		margin-bottom: 10px;
 	}
 
 	.woocommerce div.product .images.more-height .wpgis-slider-nav::-webkit-scrollbar-button {
-		background-repeat:no-repeat;
-		width:5px;
-		height:0px
+		background-repeat: no-repeat;
+		width: 5px;
+		height: 0px
 	}
 
 	.woocommerce div.product .images.more-height .wpgis-slider-nav::-webkit-scrollbar-track {
-		background-color:#ecedee
+		background-color: #ecedee
 	}
 
 	.woocommerce div.product .images.more-height .wpgis-slider-nav::-webkit-scrollbar-thumb {
 		-webkit-border-radius: 0px;
 		border-radius: 0px;
-		background-color:#9F0004;
+		background-color: #9F0004;
 	}
 
-	.woocommerce div.product .images.more-height .wpgis-slider-nav::-webkit-scrollbar-thumb:hover{
-		background-color:#9F0004;
+	.woocommerce div.product .images.more-height .wpgis-slider-nav::-webkit-scrollbar-thumb:hover {
+		background-color: #9F0004;
 	}
 
-	.woocommerce div.product .images.more-height .wpgis-slider-nav::-webkit-resizer{
-		background-repeat:no-repeat;
-		width:4px;
-		height:0px
+	.woocommerce div.product .images.more-height .wpgis-slider-nav::-webkit-resizer {
+		background-repeat: no-repeat;
+		width: 4px;
+		height: 0px
 	}
 
-	.woocommerce div.product .images.more-height .wpgis-slider-nav::-webkit-scrollbar{
+	.woocommerce div.product .images.more-height .wpgis-slider-nav::-webkit-scrollbar {
 		width: 4px;
 	}
 
 }
+
 .product-single-type {
 	margin-bottom: 0;
 	font-weight: bold;
 }
+
 .woocommerce div.product .price .price__item {
 	display: block;
 }
+
 .woocommerce div.product .price .price__title {
 	display: inline-block;
 	width: 90px;
 	color: #666;
 }
+
 .product-single-currency {
 	display: flex;
 	padding-bottom: 5px;
 	border-bottom: 1px solid #ededed;
 }
+
 .product-single-currency__title {
 	display: inline-block;
 	margin-right: 4px;
 }
+
 #alg_currency_selector br {
 	display: none;
 }
+
 #alg_currency_selector a {
 	margin-right: 6px;
 	font-weight: bold;
 }
+
 #alg_currency_selector a.active {
 	color: #b32927;
+}
+
+.woocommerce-variation.single_variation {
+	display: flex;
+	flex-direction: column-reverse;
 }

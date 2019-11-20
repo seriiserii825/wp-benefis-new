@@ -1,9 +1,9 @@
 jQuery(document).ready(function ($) {
 	"use strict";
 
-	$('a.wpgis-popup').on('click', function () {
-		alert('ok');
-	});
+	// $('a.wpgis-popup').on('click', function () {
+	// 	alert('ok');
+	// });
 
 	/*---------------------
 	 tooltip
@@ -374,6 +374,6 @@ jQuery(document).ready(function ($) {
 	// if (object_name.wpgis_zoom == 'true') {
 	// 	$('.wpgis-slider-for .slick-track .slick-current').zoom();
 	// }
-	console.log(object_name.wpgis_zoom);
+	// console.log(object_name.wpgis_zoom);
 });
 
