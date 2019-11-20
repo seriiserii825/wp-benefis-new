@@ -176,13 +176,12 @@
                             </span>
                         </a>
                         <div class="restrain small-cart-content">
-                            <p class="total"> <?php echo carbon_get_theme_option('crb_summ' . get_lang()); ?>:
+                            <p class="total cart_totals"> <?php echo carbon_get_theme_option('crb_summ' . get_lang()); ?>:
                                 <span class="amount">
                                     <?php
-                                    $currency_symbol = get_woocommerce_currency_symbol();
                                     global $woocommerce;
-                                    $totalamount = $woocommerce->cart->cart_contents_total . ' '. $currency_symbol ;
-                                    echo $totalamount;
+                                    $amount = WC()->cart->get_cart_subtotal();
+                                    echo $amount;
                                     ?>
                                 </span>
                             </p>
@@ -191,6 +190,7 @@
                                    class="button"><?php echo carbon_get_theme_option('crb_to_cart' . get_lang()); ?></a>
                             </p>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -237,3 +237,4 @@
 <!-- HEADER CONTENT -->
 <!-- main area start -->
 <div class="main-area">
+
