@@ -13,9 +13,11 @@
 		wp_register_script('jquery', 'https://code.jquery.com/jquery-3.4.1.min.js');
 		wp_enqueue_script('jquery');
 
+		wp_deregister_script( 'zoom' );
+
 		wp_enqueue_script('benefis-bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '', true);
-		wp_enqueue_script('benefis-jquery.nivo.slider-js', get_template_directory_uri() . '/custom-slider/js/jquery.nivo.slider.js', array('jquery'), '', true);
-		wp_enqueue_script('benefis-home-js', get_template_directory_uri() . '/custom-slider/home.js', array('jquery'), '', true);
+//		wp_enqueue_script('benefis-jquery.nivo.slider-js', get_template_directory_uri() . '/custom-slider/js/jquery.nivo.slider.js', array('jquery'), '', true);
+//		wp_enqueue_script('benefis-home-js', get_template_directory_uri() . '/custom-slider/home.js', array('jquery'), '', true);
 		wp_enqueue_script('benefis-jquery.mixitup.min-js', get_template_directory_uri() . '/js/jquery.mixitup.min.js', array('jquery'), '', true);
 		wp_enqueue_script('benefis-jquery-price-slider-js', get_template_directory_uri() . '/js/jquery-price-slider.js', array('jquery'), '', true);
 		wp_enqueue_script('benefis-owl.carousel.min-js', get_template_directory_uri() . '/js/owl.carousel.min.js', array('jquery'), '', true);
@@ -23,7 +25,7 @@
 //		wp_enqueue_script('benefis-waypoint-js', '//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js', array('jquery'), '', true);
 		wp_enqueue_script('benefis-jquery.counterup.min-js', get_template_directory_uri() . '/js/jquery.counterup.min.js', array('jquery'), '', true);
 		wp_enqueue_script('benefis-jquery.scrollUp-js', get_template_directory_uri() . '/js/jquery.scrollUp.js', array('jquery'), '', true);
-		wp_enqueue_script('benefis-jquery.elevateZoom-3.0.8.min-js', get_template_directory_uri() . '/js/jquery.elevateZoom-3.0.8.min.js', array('jquery'), '', true);
+//		wp_enqueue_script('benefis-jquery.elevateZoom-3.0.8.min-js', get_template_directory_uri() . '/js/jquery.elevateZoom-3.0.8.min.js', array('jquery'), '', true);
 		wp_enqueue_script('benefis-meanmenu-js', get_template_directory_uri() . '/js/jquery.meanmenu.js', array('jquery'), '', false);
 		wp_enqueue_script('benefis-wow-js', get_template_directory_uri() . '/js/wow.js', array('jquery'), '', true);
 		wp_enqueue_script('benefis-chosen.jquery.min-js', get_template_directory_uri() . '/js/chosen.jquery.min.js', array('jquery'), '', true);

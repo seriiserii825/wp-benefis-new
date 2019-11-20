@@ -367,9 +367,9 @@ jQuery(document).ready(function ($) {
 
 
 // console.log((('.wpgis-slider-for').length > 0));
-// console.log(object_name);
-	object_name.wpgis_zoom = 'false';
-	object_name.wpgis_show_lightbox = 1;
+console.log(object_name);
+	object_name.wpgis_zoom = '0';
+// 	object_name.wpgis_show_lightbox = 1;
 
 	// if (object_name.wpgis_zoom == 'true') {
 	// 	$('.wpgis-slider-for .slick-track .slick-current').zoom();
