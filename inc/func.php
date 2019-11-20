@@ -61,10 +61,11 @@ add_filter('wp_revisions_to_keep', 'my_revisions_to_keep');
 //	wp_ulike('get');
 //}
 
-add_filter('wp_ulike_format_number','wp_ulike_new_format_number',10,3);
-function wp_ulike_new_format_number($value, $num, $plus){
+add_filter('wp_ulike_format_number', 'wp_ulike_new_format_number', 10, 3);
+function wp_ulike_new_format_number($value, $num, $plus)
+{
 	if ($num >= 1000 && get_option('wp_ulike_format_number') == '1'):
-		$value = round($num/1000, 2) . 'K';
+		$value = round($num / 1000, 2) . 'K';
 	else:
 		$value = $num;
 	endif;
@@ -72,9 +73,29 @@ function wp_ulike_new_format_number($value, $num, $plus){
 }
 
 //page views
-add_action( 'after_setup_theme', function() {
-	add_theme_support( 'pageviews' );
+add_action('after_setup_theme', function () {
+	add_theme_support('pageviews');
 });
+function category_has_parent($catid)
+{
+	$category = get_category($catid);
+	if ($category->category_parent > 0) {
+		return true;
+	}
+	return false;
+}
+
+function has_Children($cat_id)
+{
+	$children = get_terms(
+		'product_cat',
+		array('parent' => $cat_id, 'hide_empty' => false)
+	);
+	if ($children) {
+		return true;
+	}
+	return false;
+}
 
 //function webp_upload_mimes( $existing_mimes ) {
 //	// add webp to the list of mime types
