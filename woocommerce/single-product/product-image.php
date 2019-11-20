@@ -1,4 +1,6 @@
+<h2>Image</h2>
 <?php
+
 //	/**
 //	 * Single Product Image
 //	 *
@@ -56,3 +58,6 @@
 <!--        </figure>-->
 <!--    </div>-->
 <!--</div>-->
+?>
+<h1>Image</h1>
+

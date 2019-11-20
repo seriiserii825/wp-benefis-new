@@ -240,6 +240,7 @@ jQuery(document).ready(function ($) {
 			}, 400);
 		});
 	};
+
 	if ($('body').hasClass('single-product')) {
 		wpgisGallery();
 	}
@@ -367,8 +368,6 @@ jQuery(document).ready(function ($) {
 
 
 // console.log((('.wpgis-slider-for').length > 0));
-console.log(object_name);
-	object_name.wpgis_zoom = '0';
 // 	object_name.wpgis_show_lightbox = 1;
 
 	// if (object_name.wpgis_zoom == 'true') {

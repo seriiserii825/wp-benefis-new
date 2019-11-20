@@ -6229,3 +6229,15 @@ span.required {
 .woocommerce .quantity .qty {
 	height: 44px;
 }
+.woocommerce-breadcrumb {
+	display: none;
+}
+.single-product .woocommerce-breadcrumb {
+	display: table;
+	border-bottom: 1px solid #ccc;
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+.single-product .woocommerce-breadcrumb a:hover {
+	color: #b32927;
+}
