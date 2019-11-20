@@ -50,19 +50,13 @@ if ($regular_price == "") {
 
 	//1: получим вариации
 	$available_variations = $product->get_available_variations();
-//    foreach(){
-//
-//    }
-
-
-	//обычная цена продажи первой вариации
-	$adult_regular_price = (int)$available_variations[0]['display_regular_price'] . get_woocommerce_currency_symbol();
-	//$available_variations можно использовать в цикле, чтобы получить значения всех вариаций
-
-	if (isset($available_variations[1]['display_price'])) {
-		$child_price = (int)$available_variations[1]['display_price'] . get_woocommerce_currency_symbol();
-	} elseif (isset($available_variations[1]['display_regular_price'])) {
-		$child_regular_price = (int)$available_variations[1]['display_regular_price'] . get_woocommerce_currency_symbol();
+	foreach ($available_variations as $item) {
+		if ($item['attributes']['attribute_pa_type_custom'] == 'vzr') {
+			$adult_price = $item['display_price'];
+		}
+		if ($item['attributes']['attribute_pa_type_custom'] == 'child') {
+			$child_price = $item['display_price'];
+		}
 	}
 //Данные получены, можем веселиться с отображением
 //Далее, я думаю, все просто и понятно
@@ -70,16 +64,16 @@ if ($regular_price == "") {
     <p class="<?php echo esc_attr(apply_filters('woocommerce_product_price_class', 'price')); ?>">
 		<?php if ($product_child): ?>
             <span class="price__item">
-            <span class="price__title"><?php echo $product_child ?></span>
-            <span class="price__value"> <?php echo $child_price; ?></span>
-        </span>
+                <span class="price__title"><?php echo $product_child ?>:</span>
+                <span class="price__value"> <?php echo round($child_price, 2); ?> <?php echo get_woocommerce_currency_symbol(); ?></span>
+            </span>
 		<?php endif; ?>
 
 		<?php if ($product_adult): ?>
             <span class="price__item">
-            <span class="price__title"><?php echo $product_adult ?></span>
-            <span class="price__value"> <?php echo $adult_price; ?></span>
-        </span>
+                <span class="price__title"><?php echo $product_adult ?>:</span>
+                <span class="price__value"> <?php echo round($adult_price, 2); ?> <?php echo get_woocommerce_currency_symbol(); ?></span>
+            </span>
 		<?php endif; ?>
     </p>
 

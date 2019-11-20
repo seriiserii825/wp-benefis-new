@@ -5483,6 +5483,7 @@ span.required {
 
 .woocommerce-variation-price {
 	/*float: left;*/
+	display: none;
 	margin-bottom: 8px;
 	padding-right: 92px;
 	padding-top: 10px;
@@ -6207,4 +6208,24 @@ span.required {
 .woocommerce-variation.single_variation {
 	display: flex;
 	flex-direction: column-reverse;
+}
+.woocommerce a.added_to_cart {
+	padding: 0 10px;
+	display: inline-block;
+	margin-left: 20px;
+	height: 45px;
+	color: #b32927;
+	line-height: 41px;
+	border: 2px solid #b32927;
+	border-radius: 4px;
+	background: transparent;
+	transition: all .4s ease;
+}
+
+.woocommerce a.added_to_cart:hover {
+	color: white;
+	background: #b32927;
+}
+.woocommerce .quantity .qty {
+	height: 44px;
 }
