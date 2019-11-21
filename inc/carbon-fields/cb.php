@@ -104,6 +104,68 @@ function crb_attach_theme_options()
 			Field::make('text', 'crb_registration_ru', __('crb_registration_ru'))
 				->set_width(30),
 		));
+
+	// Add second options page under 'Basic Options'
+	Container::make('theme_options', 'Dimension translate')
+		->set_page_parent($basic_options_container)// reference to a top level container
+		->add_fields(array(
+			Field::make('text', 'crb_breast_level_en', __('Circumference at breast level en'))
+				->set_width(30),
+			Field::make('text', 'crb_breast_level_ro', __('Circumference at breast level ro'))
+				->set_width(30),
+			Field::make('text', 'crb_breast_level_ru', __('Circumference at breast level ru'))
+				->set_width(30),
+
+			Field::make('text', 'crb_above_the_breast_en', __('Circumference above the breast en'))
+				->set_width(30),
+			Field::make('text', 'crb_above_the_breast_ro', __('Circumference above the breast ro'))
+				->set_width(30),
+			Field::make('text', 'crb_above_the_breast_ru', __('Circumference above the breast ru'))
+				->set_width(30),
+
+			Field::make('text', 'crb_below_the_breast_en', __('Circumference below the breast en'))
+				->set_width(30),
+			Field::make('text', 'crb_below_the_breast_ro', __('Circumference below the breast ro'))
+				->set_width(30),
+			Field::make('text', 'crb_below_the_breast_ru', __('Circumference below the breast ru'))
+				->set_width(30),
+
+			Field::make('text', 'crb_waist_level_en', __('Circumference at waist level en'))
+				->set_width(30),
+			Field::make('text', 'crb_waist_level_ro', __('Circumference at waist level ro'))
+				->set_width(30),
+			Field::make('text', 'crb_waist_level_ru', __('Circumference at waist level ru'))
+				->set_width(30),
+
+			Field::make('text', 'crb_hip_level_en', __('Circumference at hip level en'))
+				->set_width(30),
+			Field::make('text', 'crb_hip_level_ro', __('Circumference at hip level ro'))
+				->set_width(30),
+			Field::make('text', 'crb_hip_level_ru', __('Circumference at hip level ru'))
+				->set_width(30),
+
+			Field::make('text', 'crb_hip_level_2_en', __('Circumference at hip level_2 en'))
+				->set_width(30),
+			Field::make('text', 'crb_hip_level_2_ro', __('Circumference at hip level_2 ro'))
+				->set_width(30),
+			Field::make('text', 'crb_hip_level_2_ru', __('Circumference at hip level_2 ru'))
+				->set_width(30),
+
+			Field::make('text', 'crb_breast_height_en', __('Breast height en'))
+				->set_width(30),
+			Field::make('text', 'crb_breast_height_ro', __('Breast height ro'))
+				->set_width(30),
+			Field::make('text', 'crb_breast_height_ru', __('Breast height ru'))
+				->set_width(30),
+
+			Field::make('text', 'crb_breast_center_en', __('Breast center en'))
+				->set_width(30),
+			Field::make('text', 'crb_breast_center_ro', __('Breast center ro'))
+				->set_width(30),
+			Field::make('text', 'crb_breast_center_ru', __('Breast center ru'))
+				->set_width(30),
+
+		));
 }
 
 add_action('after_setup_theme', 'crb_load');
