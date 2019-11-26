@@ -6236,7 +6236,7 @@ span.required {
 	display: none;
 }
 
-.single-product .woocommerce-breadcrumb {
+.woocommerce-breadcrumb {
 	display: table;
 	border-bottom: 1px solid #ccc;
 	font-size: 20px;
@@ -6260,4 +6260,10 @@ span.required {
 }
 .rz_block {
 	/*display: none;*/
+}
+.cart-content {
+	padding: 30px 0;
+}
+.cart-content .woocommerce-breadcrumb {
+	display: block;
 }

@@ -13,6 +13,7 @@ if (!defined('ABSPATH'))
 
 require_once __DIR__ . '/inc/carbon-fields/cb.php';
 require_once __DIR__ . '/inc/carbon-fields/cb-main.php';
+//require_once __DIR__ . '/inc/carbon-fields/cb-product-type.php';
 require_once __DIR__ . '/inc/func.php';
 require_once __DIR__ . '/inc/func-woocommerce.php';
 require_once __DIR__ . '/inc/func-remove-woocommerce.php';
@@ -249,3 +250,30 @@ function remove_image_zoom_support() {
 }
 add_action( 'wp', 'remove_image_zoom_support', 100 );
 
+//================add_to_cart========================
+function plugin_republic_add_text_field() { ?>
+	<div class="pr-field-wrap">
+		<label for="pr-field"><?php _e( 'Your name', 'plugin-republic' ); ?></label>
+		<input type="text" name='pr-field' id='pr-field' value=''>
+	</div>
+<?php }
+add_action( 'woocommerce_before_add_to_cart_button', 'plugin_republic_add_text_field' );
+
+function plugin_republic_add_cart_item_data( $cart_item_data, $product_id, $variation_id ) {
+	if( isset( $_POST['pr-field'] ) ) {
+		$cart_item_data['pr_field'] = sanitize_text_field( $_POST['pr-field'] );
+	}
+	return $cart_item_data;
+}
+add_filter( 'woocommerce_add_cart_item_data', 'plugin_republic_add_cart_item_data', 10, 3 );
+
+function plugin_republic_get_item_data( $item_data, $cart_item_data ) {
+	if( isset( $cart_item_data['pr_field'] ) ) {
+		$item_data[] = array(
+			'key' => __( 'Your name', 'plugin-republic' ),
+			'value' => wc_clean( $cart_item_data['pr_field'] )
+		);
+	}
+	return $item_data;
+}
+add_filter( 'woocommerce_get_item_data', 'plugin_republic_get_item_data', 10, 2 );
