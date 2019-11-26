@@ -2178,7 +2178,7 @@ aside {
 	color: #fff;
 	font-size: 20px;
 	font-weight: 700;
-	right: 90px;
+	right: 10%;
 	transition: all 0.3s ease 0s;
 	width: 40px;
 	height: 40px;
@@ -6269,3 +6269,10 @@ span.required {
 .comment-area label {
 	display: block;
 }
+@media screen and (max-width: 767px) {
+	.container {
+		max-width: 767px;
+		width: auto;
+	}
+}
+
