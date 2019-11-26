@@ -259,9 +259,9 @@ function plugin_republic_add_text_field()
     <div class="rz_block">
 		<?php for ($i = 1; $i <= 28; $i++): ?>
             <div class="inprz"><label for="rz<?php echo $i ?>">
-                    <span><?php echo carbon_get_theme_option('crb_rz'.$i . get_lang()); ?></span>
+                    <span><?php echo carbon_get_theme_option('crb_rz' . $i . get_lang()); ?></span>
                     <a data-fancybox="gallery"
-                       data-caption="<?php echo carbon_get_theme_option('crb_rz'.$i . get_lang()); ?>"
+                       data-caption="<?php echo carbon_get_theme_option('crb_rz' . $i . get_lang()); ?>"
                        href="/wp-content/themes/benefis/img/rz/..<?php echo $i ?>.jpg">
                         <i
                                 class="fa fa-question-circle" aria-hidden="true"></i>
@@ -272,12 +272,23 @@ function plugin_republic_add_text_field()
             </div>
 		<?php endfor; ?>
     </div>
+    <div class="comment-area">
+        <label for="js-comment-area">
+            <span><?php echo carbon_get_theme_option('crb_comment_area'.get_lang()); ?></span>
+        </label>
+<!--        <input id="rz--><?php //echo $i ?><!--" name="rz--><?php //echo $i ?><!--" type="text" class="custom_rz" value="">-->
+        <textarea name="js-comment-area" id="js-comment-area" cols="30" rows="10"></textarea>
+    </div>
 <?php }
 
 add_action('woocommerce_before_add_to_cart_button', 'plugin_republic_add_text_field');
 
 function plugin_republic_add_cart_item_data($cart_item_data, $product_id, $variation_id)
 {
+	if (isset($_POST['js-comment-area'])) {
+		$cart_item_data['js-comment-area'] = sanitize_text_field($_POST['js-comment-area']);
+	}
+
 	for ($i = 1; $i <= 28; $i++) {
 		if (isset($_POST['rz' . $i])) {
 			$cart_item_data['rz' . $i] = sanitize_text_field($_POST['rz' . $i]);
@@ -290,13 +301,20 @@ add_filter('woocommerce_add_cart_item_data', 'plugin_republic_add_cart_item_data
 
 function plugin_republic_get_item_data($item_data, $cart_item_data)
 {
+	if (isset($cart_item_data['js-comment-area'])) {
+		$key_field = carbon_get_theme_option('crb_comment_area'.get_lang());
+		$item_data[] = array(
+			'key' => $key_field,
+			'value' => wc_clean($cart_item_data['js-comment-area'])
+		);
+	}
 
 	for ($i = 1; $i <= 28; $i++) {
-		if (isset($cart_item_data['rz'.$i])) {
-		    $key_field = carbon_get_theme_option('crb_rz'.$i . get_lang());
+		if (isset($cart_item_data['rz' . $i])) {
+			$key_field = carbon_get_theme_option('crb_rz' . $i . get_lang());
 			$item_data[] = array(
 				'key' => $key_field,
-				'value' => wc_clean($cart_item_data['rz'.$i])
+				'value' => wc_clean($cart_item_data['rz' . $i])
 			);
 		}
 	}

@@ -6266,3 +6266,6 @@ span.required {
 .cart-content .woocommerce-breadcrumb {
 	display: block;
 }
+.comment-area label {
+	display: block;
+}

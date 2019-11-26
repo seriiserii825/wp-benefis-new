@@ -109,6 +109,13 @@ function crb_attach_theme_options()
 	Container::make('theme_options', 'Dimension translate')
 		->set_page_parent($basic_options_container)// reference to a top level container
 		->add_fields(array(
+			Field::make('text', 'crb_comment_area_en', __('Comment area en'))
+				->set_width(30),
+			Field::make('text', 'crb_comment_area_ro', __('Comment area ro'))
+				->set_width(30),
+			Field::make('text', 'crb_comment_area_ru', __('Comment area ru'))
+				->set_width(30),
+
 			Field::make('text', 'crb_rz1_en', __('Circumference at breast level en'))
 				->set_width(30),
 			Field::make('text', 'crb_rz1_ro', __('Circumference at breast level ro'))

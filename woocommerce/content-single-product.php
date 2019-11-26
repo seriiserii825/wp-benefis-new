@@ -32,24 +32,6 @@ if (post_password_required()) {
 }
 global $wpdb;
 ?>
-
-<!--<script>-->
-<!--	jQuery(document).ready(function ($) {-->
-<!--		// razmer-->
-<!--		$('#pa_razmer').change(function () {-->
-<!---->
-<!--			let th = $(this).find(':selected').val();-->
-<!---->
-<!--			if (th === 'svoj-razmer') {-->
-<!--				$('.rz_block').css('display','block');-->
-<!---->
-<!--			} else {-->
-<!--				$('.rz_block').css('display','none');-->
-<!--			}-->
-<!--		});-->
-<!--	});-->
-<!--</script>-->
-
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class('', $product); ?>>
 	<?php
 	/**
@@ -76,8 +58,6 @@ global $wpdb;
 		 */
 		do_action('woocommerce_single_product_summary');
 		?>
-
-
     </div>
 	<?php
 	/**
