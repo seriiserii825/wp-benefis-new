@@ -245,35 +245,62 @@ class Child_Wrap extends Walker_Nav_Menu
 	}
 
 }
-function remove_image_zoom_support() {
-	remove_theme_support( 'wc-product-gallery-zoom' );
+
+function remove_image_zoom_support()
+{
+	remove_theme_support('wc-product-gallery-zoom');
 }
-add_action( 'wp', 'remove_image_zoom_support', 100 );
+
+add_action('wp', 'remove_image_zoom_support', 100);
 
 //================add_to_cart========================
-function plugin_republic_add_text_field() { ?>
-	<div class="pr-field-wrap">
-		<label for="pr-field"><?php _e( 'Your name', 'plugin-republic' ); ?></label>
-		<input type="text" name='pr-field' id='pr-field' value=''>
-	</div>
+function plugin_republic_add_text_field()
+{ ?>
+    <div class="rz_block">
+		<?php for ($i = 1; $i <= 28; $i++): ?>
+            <div class="inprz"><label for="rz<?php echo $i ?>">
+                    <span><?php echo carbon_get_theme_option('crb_rz'.$i . get_lang()); ?></span>
+                    <a data-fancybox="gallery"
+                       data-caption="<?php echo carbon_get_theme_option('crb_rz'.$i . get_lang()); ?>"
+                       href="/wp-content/themes/benefis/img/rz/..<?php echo $i ?>.jpg">
+                        <i
+                                class="fa fa-question-circle" aria-hidden="true"></i>
+                    </a>
+                </label>
+                <input id="rz<?php echo $i ?>" name="rz<?php echo $i ?>" type="text"
+                       class="custom_rz" value="">
+            </div>
+		<?php endfor; ?>
+    </div>
 <?php }
-add_action( 'woocommerce_before_add_to_cart_button', 'plugin_republic_add_text_field' );
 
-function plugin_republic_add_cart_item_data( $cart_item_data, $product_id, $variation_id ) {
-	if( isset( $_POST['pr-field'] ) ) {
-		$cart_item_data['pr_field'] = sanitize_text_field( $_POST['pr-field'] );
+add_action('woocommerce_before_add_to_cart_button', 'plugin_republic_add_text_field');
+
+function plugin_republic_add_cart_item_data($cart_item_data, $product_id, $variation_id)
+{
+	for ($i = 1; $i <= 28; $i++) {
+		if (isset($_POST['rz' . $i])) {
+			$cart_item_data['rz' . $i] = sanitize_text_field($_POST['rz' . $i]);
+		}
 	}
 	return $cart_item_data;
 }
-add_filter( 'woocommerce_add_cart_item_data', 'plugin_republic_add_cart_item_data', 10, 3 );
 
-function plugin_republic_get_item_data( $item_data, $cart_item_data ) {
-	if( isset( $cart_item_data['pr_field'] ) ) {
-		$item_data[] = array(
-			'key' => __( 'Your name', 'plugin-republic' ),
-			'value' => wc_clean( $cart_item_data['pr_field'] )
-		);
+add_filter('woocommerce_add_cart_item_data', 'plugin_republic_add_cart_item_data', 10, 3);
+
+function plugin_republic_get_item_data($item_data, $cart_item_data)
+{
+
+	for ($i = 1; $i <= 28; $i++) {
+		if (isset($cart_item_data['rz'.$i])) {
+		    $key_field = carbon_get_theme_option('crb_rz'.$i . get_lang());
+			$item_data[] = array(
+				'key' => $key_field,
+				'value' => wc_clean($cart_item_data['rz'.$i])
+			);
+		}
 	}
 	return $item_data;
 }
-add_filter( 'woocommerce_get_item_data', 'plugin_republic_get_item_data', 10, 2 );
+
+add_filter('woocommerce_get_item_data', 'plugin_republic_get_item_data', 10, 2);

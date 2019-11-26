@@ -109,200 +109,200 @@ function crb_attach_theme_options()
 	Container::make('theme_options', 'Dimension translate')
 		->set_page_parent($basic_options_container)// reference to a top level container
 		->add_fields(array(
-			Field::make('text', 'crb_breast_level_en', __('Circumference at breast level en'))
+			Field::make('text', 'crb_rz1_en', __('Circumference at breast level en'))
 				->set_width(30),
-			Field::make('text', 'crb_breast_level_ro', __('Circumference at breast level ro'))
+			Field::make('text', 'crb_rz1_ro', __('Circumference at breast level ro'))
 				->set_width(30),
-			Field::make('text', 'crb_breast_level_ru', __('Circumference at breast level ru'))
-				->set_width(30),
-
-			Field::make('text', 'crb_above_the_breast_en', __('Circumference above the breast en'))
-				->set_width(30),
-			Field::make('text', 'crb_above_the_breast_ro', __('Circumference above the breast ro'))
-				->set_width(30),
-			Field::make('text', 'crb_above_the_breast_ru', __('Circumference above the breast ru'))
+			Field::make('text', 'crb_rz1_ru', __('Circumference at breast level ru'))
 				->set_width(30),
 
-			Field::make('text', 'crb_below_the_breast_en', __('Circumference below the breast en'))
+			Field::make('text', 'crb_rz2_en', __('Circumference above the breast en'))
 				->set_width(30),
-			Field::make('text', 'crb_below_the_breast_ro', __('Circumference below the breast ro'))
+			Field::make('text', 'crb_rz2_ro', __('Circumference above the breast ro'))
 				->set_width(30),
-			Field::make('text', 'crb_below_the_breast_ru', __('Circumference below the breast ru'))
-				->set_width(30),
-
-			Field::make('text', 'crb_waist_level_en', __('Circumference at waist level en'))
-				->set_width(30),
-			Field::make('text', 'crb_waist_level_ro', __('Circumference at waist level ro'))
-				->set_width(30),
-			Field::make('text', 'crb_waist_level_ru', __('Circumference at waist level ru'))
+			Field::make('text', 'crb_rz2_ru', __('Circumference above the breast ru'))
 				->set_width(30),
 
-			Field::make('text', 'crb_hip_level_en', __('Circumference at hip level en'))
+			Field::make('text', 'crb_rz3_en', __('Circumference below the breast en'))
 				->set_width(30),
-			Field::make('text', 'crb_hip_level_ro', __('Circumference at hip level ro'))
+			Field::make('text', 'crb_rz3_ro', __('Circumference below the breast ro'))
 				->set_width(30),
-			Field::make('text', 'crb_hip_level_ru', __('Circumference at hip level ru'))
-				->set_width(30),
-
-			Field::make('text', 'crb_hip_level_2_en', __('Circumference at hip level_2 en'))
-				->set_width(30),
-			Field::make('text', 'crb_hip_level_2_ro', __('Circumference at hip level_2 ro'))
-				->set_width(30),
-			Field::make('text', 'crb_hip_level_2_ru', __('Circumference at hip level_2 ru'))
+			Field::make('text', 'crb_rz3_ru', __('Circumference below the breast ru'))
 				->set_width(30),
 
-			Field::make('text', 'crb_breast_height_en', __('Breast height en'))
+			Field::make('text', 'crb_rz4_en', __('Circumference at waist level en'))
 				->set_width(30),
-			Field::make('text', 'crb_breast_height_ro', __('Breast height ro'))
+			Field::make('text', 'crb_rz4_ro', __('Circumference at waist level ro'))
 				->set_width(30),
-			Field::make('text', 'crb_breast_height_ru', __('Breast height ru'))
-				->set_width(30),
-
-			Field::make('text', 'crb_breast_center_en', __('Breast center en'))
-				->set_width(30),
-			Field::make('text', 'crb_breast_center_ro', __('Breast center ro'))
-				->set_width(30),
-			Field::make('text', 'crb_breast_center_ru', __('Breast center ru'))
+			Field::make('text', 'crb_rz4_ru', __('Circumference at waist level ru'))
 				->set_width(30),
 
-			Field::make('text', 'crb_distance_from_nipples_to_the_waist_line_en', __('Distance from nipples to the waist line en'))
+			Field::make('text', 'crb_rz5_en', __('Circumference at hip level en'))
 				->set_width(30),
-			Field::make('text', 'crb_distance_from_nipples_to_the_waist_line_ro', __('Distance from nipples to the waist line ro'))
+			Field::make('text', 'crb_rz5_ro', __('Circumference at hip level ro'))
 				->set_width(30),
-			Field::make('text', 'crb_distance_from_nipples_to_the_waist_line_ru', __('Distance from nipples to the waist line ru'))
-				->set_width(30),
-
-			Field::make('text', 'crb_front_width_en', __('Front width en'))
-				->set_width(30),
-			Field::make('text', 'crb_front_width_ro', __('Front width ro'))
-				->set_width(30),
-			Field::make('text', 'crb_front_width_ru', __('Front width ru'))
+			Field::make('text', 'crb_rz5_ru', __('Circumference at hip level ru'))
 				->set_width(30),
 
-			Field::make('text', 'crb_back_width_en', __('Back width en'))
+			Field::make('text', 'crb_rz6_en', __('Circumference at hip level (2) en'))
 				->set_width(30),
-			Field::make('text', 'crb_back_width_ro', __('Back width ro'))
+			Field::make('text', 'crb_rz6_ro', __('Circumference at hip level (2) ro'))
 				->set_width(30),
-			Field::make('text', 'crb_back_width_ru', __('Back width ru'))
-				->set_width(30),
-
-			Field::make('text', 'crb_front_length_en', __('Front length en'))
-				->set_width(30),
-			Field::make('text', 'crb_front_length_ro', __('Front length ro'))
-				->set_width(30),
-			Field::make('text', 'crb_front_length_ru', __('Front length ru'))
+			Field::make('text', 'crb_rz6_ru', __('Circumference at hip level (2) ru'))
 				->set_width(30),
 
-			Field::make('text', 'crb_back_length_en', __('Back length en'))
+			Field::make('text', 'crb_rz7_en', __('Breast height en'))
 				->set_width(30),
-			Field::make('text', 'crb_back_length_ro', __('Back length ro'))
+			Field::make('text', 'crb_rz7_ro', __('Breast height ro'))
 				->set_width(30),
-			Field::make('text', 'crb_back_length_ru', __('Back length ru'))
-				->set_width(30),
-
-			Field::make('text', 'crb_slanting_front_length_en', __('Slanting front length en'))
-				->set_width(30),
-			Field::make('text', 'crb_slanting_front_length_ro', __('Slanting front length ro'))
-				->set_width(30),
-			Field::make('text', 'crb_slanting_front_length_ru', __('Slanting front length ru'))
+			Field::make('text', 'crb_rz7_ru', __('Breast height ru'))
 				->set_width(30),
 
-			Field::make('text', 'crb_slanting_back_length_en', __('Slanting back length en'))
+			Field::make('text', 'crb_rz8_en', __('Breast center en'))
 				->set_width(30),
-			Field::make('text', 'crb_slanting_back_length_ro', __('Slanting back length ro'))
+			Field::make('text', 'crb_rz8_ro', __('Breast center ro'))
 				->set_width(30),
-			Field::make('text', 'crb_slanting_back_length_ru', __('Slanting back length ru'))
-				->set_width(30),
-
-			Field::make('text', 'crb_shoulder_length_en', __('Shoulder length en'))
-				->set_width(30),
-			Field::make('text', 'crb_shoulder_length_ro', __('Shoulder length ro'))
-				->set_width(30),
-			Field::make('text', 'crb_shoulder_length_ru', __('Shoulder length ru'))
+			Field::make('text', 'crb_rz8_ru', __('Breast center ru'))
 				->set_width(30),
 
-			Field::make('text', 'crb_sleeve_length_en', __('Sleeve length en'))
+			Field::make('text', 'crb_rz9_en', __('Distance from nipples to the waist line en'))
 				->set_width(30),
-			Field::make('text', 'crb_sleeve_length_ro', __('Sleeve length ro'))
+			Field::make('text', 'crb_rz9_ro', __('Distance from nipples to the waist line ro'))
 				->set_width(30),
-			Field::make('text', 'crb_sleeve_length_ru', __('Sleeve length ru'))
-				->set_width(30),
-
-			Field::make('text', 'crb_circumference_of_the_arm_en', __('Circumference of the arm en'))
-				->set_width(30),
-			Field::make('text', 'crb_circumference_of_the_arm_ro', __('Circumference of the arm ro'))
-				->set_width(30),
-			Field::make('text', 'crb_circumference_of_the_arm_ru', __('Circumference of the arm ru'))
+			Field::make('text', 'crb_rz9_ru', __('Distance from nipples to the waist line ru'))
 				->set_width(30),
 
-			Field::make('text', 'crb_circumference_of_the_wrist_en', __('Circumference of the wrist en'))
+			Field::make('text', 'crb_rz10_en', __('Front width en'))
 				->set_width(30),
-			Field::make('text', 'crb_circumference_of_the_wrist_ro', __('Circumference of the wrist ro'))
+			Field::make('text', 'crb_rz10_ro', __('Front width ro'))
 				->set_width(30),
-			Field::make('text', 'crb_circumference_of_the_wrist_ru', __('Circumference of the wrist ru'))
-				->set_width(30),
-
-			Field::make('text', 'crb_circumference_of_the_leg_en', __('Circumference of the leg en'))
-				->set_width(30),
-			Field::make('text', 'crb_circumference_of_the_leg_ro', __('Circumference of the leg ro'))
-				->set_width(30),
-			Field::make('text', 'crb_circumference_of_the_leg_ru', __('Circumference of the leg ru'))
+			Field::make('text', 'crb_rz10_ru', __('Front width ru'))
 				->set_width(30),
 
-			Field::make('text', 'crb_seat_height_en', __('Seat height en'))
+			Field::make('text', 'crb_rz11_en', __('Back width en'))
 				->set_width(30),
-			Field::make('text', 'crb_seat_height_ro', __('Seat height ro'))
+			Field::make('text', 'crb_rz11_ro', __('Back width ro'))
 				->set_width(30),
-			Field::make('text', 'crb_seat_height_ru', __('Seat height ru'))
-				->set_width(30),
-
-			Field::make('text', 'crb_total_height_of_the_individual_en', __('Total height of the individual en'))
-				->set_width(30),
-			Field::make('text', 'crb_total_height_of_the_individual_ro', __('Total height of the individual ro'))
-				->set_width(30),
-			Field::make('text', 'crb_total_height_of_the_individual_ru', __('Total height of the individual ru'))
+			Field::make('text', 'crb_rz11_ru', __('Back width ru'))
 				->set_width(30),
 
-			Field::make('text', 'crb_side_distance_from_waist_to_floor_en', __('Side distance from waist to floor en'))
+			Field::make('text', 'crb_rz12_en', __('Front length en'))
 				->set_width(30),
-			Field::make('text', 'crb_side_distance_from_waist_to_floor_ro', __('Side distance from waist to floor ro'))
+			Field::make('text', 'crb_rz12_ro', __('Front length ro'))
 				->set_width(30),
-			Field::make('text', 'crb_side_distance_from_waist_to_floor_ru', __('Side distance from waist to floor ru'))
-				->set_width(30),
-
-			Field::make('text', 'crb_step_line_en', __('Step line en'))
-				->set_width(30),
-			Field::make('text', 'crb_step_line_ro', __('Step line ro'))
-				->set_width(30),
-			Field::make('text', 'crb_step_line_ru', __('Step line ru'))
+			Field::make('text', 'crb_rz12_ru', __('Front length ru'))
 				->set_width(30),
 
-			Field::make('text', 'crb_side_distance_from_waist_to_the_knees_en', __('Side distance from waist to the knees en'))
+			Field::make('text', 'crb_rz13_en', __('Back length en'))
 				->set_width(30),
-			Field::make('text', 'crb_side_distance_from_waist_to_the_knees_ro', __('Side distance from waist to the knees ro'))
+			Field::make('text', 'crb_rz13_ro', __('Back length ro'))
 				->set_width(30),
-			Field::make('text', 'crb_side_distance_from_waist_to_the_knees_ru', __('Side distance from waist to the knees ru'))
-				->set_width(30),
-
-			Field::make('text', 'crb_circumference_of_the_neck_en', __('Circumference of the neck en'))
-				->set_width(30),
-			Field::make('text', 'crb_circumference_of_the_neck_ro', __('Circumference of the neck ro'))
-				->set_width(30),
-			Field::make('text', 'crb_circumference_of_the_neck_ru', __('Circumference of the neck ru'))
+			Field::make('text', 'crb_rz13_ru', __('Back length ru'))
 				->set_width(30),
 
-			Field::make('text', 'crb_length_of_basque_of_tutu_en', __('Length of basque of tutu en'))
+			Field::make('text', 'crb_rz14_en', __('Slanting front length en'))
 				->set_width(30),
-			Field::make('text', 'crb_length_of_basque_of_tutu_ro', __('Length of basque of tutu ro'))
+			Field::make('text', 'crb_rz14_ro', __('Slanting front length ro'))
 				->set_width(30),
-			Field::make('text', 'crb_length_of_basque_of_tutu_ru', __('Length of basque of tutu ru'))
+			Field::make('text', 'crb_rz14_ru', __('Slanting front length ru'))
 				->set_width(30),
 
-			Field::make('text', 'crb_tutu_length_en', __('Tutu length en'))
+			Field::make('text', 'crb_rz15_en', __('Slanting back length en'))
 				->set_width(30),
-			Field::make('text', 'crb_tutu_length_ro', __('Tutu length ro'))
+			Field::make('text', 'crb_rz15_ro', __('Slanting back length ro'))
 				->set_width(30),
-			Field::make('text', 'crb_tutu_length_ru', __('Tutu length ru'))
+			Field::make('text', 'crb_rz15_ru', __('Slanting back length ru'))
+				->set_width(30),
+
+			Field::make('text', 'crb_rz16_en', __('Shoulder length en'))
+				->set_width(30),
+			Field::make('text', 'crb_rz16_ro', __('Shoulder length ro'))
+				->set_width(30),
+			Field::make('text', 'crb_rz16_ru', __('Shoulder length ru'))
+				->set_width(30),
+
+			Field::make('text', 'crb_rz17_en', __('Sleeve length en'))
+				->set_width(30),
+			Field::make('text', 'crb_rz17_ro', __('Sleeve length ro'))
+				->set_width(30),
+			Field::make('text', 'crb_rz17_ru', __('Sleeve length ru'))
+				->set_width(30),
+
+			Field::make('text', 'crb_rz18_en', __('Circumference of the arm en'))
+				->set_width(30),
+			Field::make('text', 'crb_rz18_ro', __('Circumference of the arm ro'))
+				->set_width(30),
+			Field::make('text', 'crb_rz18_ru', __('Circumference of the arm ru'))
+				->set_width(30),
+
+			Field::make('text', 'crb_rz19_en', __('Circumference of the wrist en'))
+				->set_width(30),
+			Field::make('text', 'crb_rz19_ro', __('Circumference of the wrist ro'))
+				->set_width(30),
+			Field::make('text', 'crb_rz19_ru', __('Circumference of the wrist ru'))
+				->set_width(30),
+
+			Field::make('text', 'crb_rz20_en', __('Circumference of the leg en'))
+				->set_width(30),
+			Field::make('text', 'crb_rz20_ro', __('Circumference of the leg ro'))
+				->set_width(30),
+			Field::make('text', 'crb_rz20_ru', __('Circumference of the leg ru'))
+				->set_width(30),
+
+			Field::make('text', 'crb_rz21_en', __('Seat height en'))
+				->set_width(30),
+			Field::make('text', 'crb_rz21_ro', __('Seat height ro'))
+				->set_width(30),
+			Field::make('text', 'crb_rz21_ru', __('Seat height ru'))
+				->set_width(30),
+
+			Field::make('text', 'crb_rz22_en', __('Total height of the individual en'))
+				->set_width(30),
+			Field::make('text', 'crb_rz22_ro', __('Total height of the individual ro'))
+				->set_width(30),
+			Field::make('text', 'crb_rz22_ru', __('Total height of the individual ru'))
+				->set_width(30),
+
+			Field::make('text', 'crb_rz23_en', __('Side distance from waist to floor en'))
+				->set_width(30),
+			Field::make('text', 'crb_rz23_ro', __('Side distance from waist to floor ro'))
+				->set_width(30),
+			Field::make('text', 'crb_rz23_ru', __('Side distance from waist to floor ru'))
+				->set_width(30),
+
+			Field::make('text', 'crb_rz24_en', __('Step line en'))
+				->set_width(30),
+			Field::make('text', 'crb_rz24_ro', __('Step line ro'))
+				->set_width(30),
+			Field::make('text', 'crb_rz24_ru', __('Step line ru'))
+				->set_width(30),
+
+			Field::make('text', 'crb_rz25_en', __('Side distance from waist to the knees en'))
+				->set_width(30),
+			Field::make('text', 'crb_rz25_ro', __('Side distance from waist to the knees ro'))
+				->set_width(30),
+			Field::make('text', 'crb_rz25_ru', __('Side distance from waist to the knees ru'))
+				->set_width(30),
+
+			Field::make('text', 'crb_rz26_en', __('Circumference of the neck en'))
+				->set_width(30),
+			Field::make('text', 'crb_rz26_ro', __('Circumference of the neck ro'))
+				->set_width(30),
+			Field::make('text', 'crb_rz26_ru', __('Circumference of the neck ru'))
+				->set_width(30),
+
+			Field::make('text', 'crb_rz27_en', __('Length of basque of tutu en'))
+				->set_width(30),
+			Field::make('text', 'crb_rz27_ro', __('Length of basque of tutu ro'))
+				->set_width(30),
+			Field::make('text', 'crb_rz27_ru', __('Length of basque of tutu ru'))
+				->set_width(30),
+
+			Field::make('text', 'crb_rz28_en', __('Tutu length en'))
+				->set_width(30),
+			Field::make('text', 'crb_rz28_ro', __('Tutu length ro'))
+				->set_width(30),
+			Field::make('text', 'crb_rz28_ru', __('Tutu length ru'))
 				->set_width(30),
 
 		));
