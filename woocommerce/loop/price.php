@@ -21,7 +21,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $product;
 ?>
-
-<?php if ( $price_html = $product->get_price_html() ) : ?>
-	<span class="price"><?php echo $price_html; ?></span>
-<?php endif; ?>
+<h1>Price</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab consequuntur distinctio fugiat laborum quisquam rem
+    repudiandae voluptates, voluptatibus! Assumenda culpa, error inventore libero minima numquam porro quos tempora
+    veniam vero! Architecto, assumenda, corporis exercitationem in iure iusto laudantium magni nihil quidem
+    reprehenderit suscipit ullam velit voluptates? Alias aliquid culpa esse et id quis sequi velit? Atque commodi
+    cupiditate ea eaque expedita itaque, iure laboriosam libero neque obcaecati odit perspiciatis repellat saepe sed
+    sunt suscipit unde? Accusantium amet autem, commodi debitis dolorem doloremque ea facilis impedit iste maiores
+    mollitia neque non, odit officia officiis praesentium provident quaerat repudiandae, saepe sapiente ullam.</p>
+<?php //if ( $price_html = $product->get_price_html() ) : ?>
+<!--<!--	<span class="price">-->--><?php ////echo $price_html; ?><!--<!--</span>-->-->
+<?php //endif; ?>

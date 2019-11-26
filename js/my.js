@@ -367,6 +367,11 @@ jQuery(document).ready(function ($) {
 		activeCurrencySymbol();
 
 		let showSizeAttributes = function () {
+			let sizeSelect = $('#pa_razmer').find(':selected').val();
+			if(sizeSelect !== 'svoj-razmer'){
+				$('.rz_block').css('display', 'none');
+			}
+
 			$('#pa_razmer').change(function () {
 				let th = $(this).find(':selected').val();
 				if (th === 'svoj-razmer') {

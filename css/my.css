@@ -6234,7 +6234,9 @@ span.required {
 .woocommerce-breadcrumb {
 	display: none;
 }
-
+.tax-product_cat .woocommerce-breadcrumb {
+	display: none;
+}
 .woocommerce-breadcrumb {
 	display: table;
 	border-bottom: 1px solid #ccc;
