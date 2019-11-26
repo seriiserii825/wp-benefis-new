@@ -6277,4 +6277,15 @@ span.required {
 		width: auto;
 	}
 }
-
+.bs-products-loops .price__item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.bs-products-loops .price__item .price__regular {
+	margin-left: auto;
+	text-decoration: line-through;
+}
+.bs-products-loops .price__item .price__sale {
+	margin-left: 4px;
+}

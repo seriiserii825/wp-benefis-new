@@ -21,37 +21,73 @@ if (!defined('ABSPATH')) {
 
 global $product;
 
-$benefis_attr_str = $product->get_attribute('type_custom');
+$product_adult = '';
+$product_child = '';
 
-$benefis_first_attr = '';
-$benefis_second_attr = '';
+$product_type = $product->get_attribute('type_custom');
+$product_type_arr = explode(', ', $product_type);
 
-$benefis_attr_arr = explode(', ', $benefis_attr_str);
-$benefis_attr_arr = array_reverse($benefis_attr_arr);
-
-if ($benefis_attr_arr[0]) {
-	$benefis_first_attr = $benefis_attr_arr[0];
-}
-if (isset($benefis_attr_arr[1])) {
-	$benefis_second_attr = $benefis_attr_arr[1];
+if ($product_type_arr[0]) {
+	$product_adult = $product_type_arr[0];
 }
 
-if (!empty($benefis_first_attr && !empty($benefis_second_attr))) {
-	$benefis_attr_str = $benefis_first_attr . ' - ' . $benefis_second_attr . ':';
-} elseif (!empty($benefis_first_attr)) {
-	$benefis_attr_str = $benefis_first_attr;
-} elseif (empty($benefis_second_attr)) {
-	$benefis_attr_str = $benefis_second_attr;
-} else {
-	$benefis_attr_str = '';
+if (isset($product_type_arr[1])) {
+	$product_child = $product_type_arr[1];
 }
 
-echo apply_filters('woocommerce_loop_add_to_cart_link', // WPCS: XSS ok.
-	sprintf('
+//получаем цену продажи (распродажи)
+$sale_price = get_post_meta(get_the_ID(), '_price', true);
+$regular_price = get_post_meta(get_the_ID(), '_regular_price', true);
+$symbol = get_woocommerce_currency_symbol();
+
+
+//если у нас обычная стоимость отсутствует, то будем перебирать вариативную
+if ($regular_price == "") {
+	$adult_price = '';
+	$adult_regular_price = '';
+	$child_price = '';
+	$child_regular_price = '';
+
+	//1: получим вариации
+	$available_variations = $product->get_available_variations();
+	foreach ($available_variations as $item) {
+		if ($item['attributes']['attribute_pa_type_custom'] == 'vzr') {
+			$adult_price = $item['display_price'];
+			$adult_regular_price = $item['display_regular_price'].' - ';
+		}
+		if ($item['attributes']['attribute_pa_type_custom'] == 'child') {
+			$child_price = $item['display_price'];
+			$child_regular_price = $item['display_regular_price'].' - ';
+		}
+	}
+	$adult_html = '';
+	$child_html = '';
+
+	if(!empty($adult_price)){
+		$adult_html = '<span class="price__item">
+							<span class="price__type">'.$product_adult.':</span>
+							<span class="price__regular">'.round($adult_regular_price, 0).''.$symbol.'</span>
+							<span class="price__sale">'.round($adult_price, 0).''.$symbol.'</span>
+						</span>';
+	}
+
+	if(!empty($child_price)){
+		$child_html = '<span class="price__item">
+							<span class="price__type">'.$product_child.':</span>
+							<span class="price__regular">'.round($child_regular_price, 0).''.$symbol.'</span>
+							<span class="price__sale">'.round($child_price, 0).''.$symbol.'</span>
+						</span>';
+	}
+
+//Данные получены, можем веселиться с отображением
+//Далее, я думаю, все просто и понятно
+
+	echo apply_filters('woocommerce_loop_add_to_cart_link', // WPCS: XSS ok.
+		sprintf('
 			<div class="price-box">
 				<span class="new-price">
-					<span class="price">' . $benefis_attr_str . '<br>
-						' . $product->get_price_html() . '
+					<span class="price">
+					'.$adult_html.''.$child_html.'
 					</span>
 				</span>
 			</div>
@@ -63,8 +99,8 @@ echo apply_filters('woocommerce_loop_add_to_cart_link', // WPCS: XSS ok.
 
 			<div class="price-box">
 				<span class="new-price">
-					<span class="price">' . $benefis_attr_str . '<br>
-						' . $product->get_price_html() . '
+					<span class="price">
+					'.$adult_html.''.$child_html.'
 					</span>
 				</span>
 			</div>
@@ -75,4 +111,6 @@ echo apply_filters('woocommerce_loop_add_to_cart_link', // WPCS: XSS ok.
 			</div>
 		</div>
 		', esc_url($product->add_to_cart_url()), esc_attr(isset($args['class']) ? $args['class'] : 'button'), isset($args['attributes']) ? wc_implode_html_attributes($args['attributes']) : '', esc_html($product->add_to_cart_text())), $product, $args);
+}
+
 
