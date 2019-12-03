@@ -25,6 +25,7 @@ global $product;
 <?php
 $product_adult = '';
 $product_child = '';
+$symbol = get_woocommerce_currency_symbol();
 
 $product_type = $product->get_attribute('type_custom');
 $product_type_arr = explode(', ', $product_type);
@@ -53,27 +54,55 @@ if ($regular_price == "") {
 	foreach ($available_variations as $item) {
 		if ($item['attributes']['attribute_pa_type_custom'] == 'vzr') {
 			$adult_price = $item['display_price'];
+			$adult_regular_price = $item['display_regular_price'];
 		}
 		if ($item['attributes']['attribute_pa_type_custom'] == 'child') {
 			$child_price = $item['display_price'];
+			$child_regular_price = $item['display_regular_price'];
 		}
+	}
+
+	if ($adult_regular_price == $adult_price) {
+		$adult_regular_price = '';
+		$adult_price = round($adult_price, 0) . '' . $symbol;
+	} else {
+		$adult_regular_price = round($adult_regular_price, 0) . '' . $symbol;
+		$adult_price = round($adult_price, 0) . '' . $symbol;
+	}
+	if ($child_regular_price == $child_price) {
+		$child_regular_price = '';
+		$child_price = round($child_price, 0) . '' . $symbol;
+	} else {
+		$child_regular_price = round($child_regular_price, 0) . '' . $symbol;
+		$child_price = round($child_price, 0) . '' . $symbol;
+	}
+
+	$adult_html = '';
+	$child_html = '';
+
+	if (!empty($adult_price)) {
+		$adult_html = '<span class="price__item">
+                <span class="price__title">'.$product_adult.':</span>
+                <span class="price__value"><span class="price__regular">'.$adult_regular_price.'</span> '.$adult_price.'</span>
+            </span>';
+	}
+
+	if (!empty($child_price)) {
+		$child_html = '<span class="price__item">
+                <span class="price__title">'.$product_child.':</span>
+                <span class="price__value"><span class="price__regular">'.$child_regular_price.'</span> '.$child_price.'</span>
+            </span>';
 	}
 //Данные получены, можем веселиться с отображением
 //Далее, я думаю, все просто и понятно
 	?>
     <p class="<?php echo esc_attr(apply_filters('woocommerce_product_price_class', 'price')); ?>">
 		<?php if ($product_child): ?>
-            <span class="price__item">
-                <span class="price__title"><?php echo $product_child ?>:</span>
-                <span class="price__value"> <?php echo round($child_price, 2); ?> <?php echo get_woocommerce_currency_symbol(); ?></span>
-            </span>
+            <?php echo $child_html; ?>
 		<?php endif; ?>
 
 		<?php if ($product_adult): ?>
-            <span class="price__item">
-                <span class="price__title"><?php echo $product_adult ?>:</span>
-                <span class="price__value"> <?php echo round($adult_price, 2); ?> <?php echo get_woocommerce_currency_symbol(); ?></span>
-            </span>
+			<?php echo $adult_html; ?>
 		<?php endif; ?>
     </p>
 

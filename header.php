@@ -29,89 +29,94 @@
 <!-- header area start -->
 <div class="header-area">
     <div class="header-top">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                    <div class="single-drop">
-                        <nav>
-                            <ul>
-                                <li>
-                                    <label><i class="fa fa-map-marker"></i><?php echo carbon_get_theme_option('crb_address' . get_lang()); ?>
-                                    </label>
-                                </li>
-                                <li>
-                                    <label><i class="fa fa-cog"></i>
-										<?php echo carbon_get_theme_option('crb_valulte' . get_lang()); ?>:
-                                    </label>
-                                    <span class="currenty">
+        <div class="header-top__item">
+            <div class="single-drop">
+                <nav>
+                    <ul>
+                        <li>
+                            <label>
+                                <i class="fa fa-map-marker"></i><?php echo carbon_get_theme_option('crb_address' . get_lang()); ?>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <i class="fa fa-cog"></i>
+								<?php echo carbon_get_theme_option('crb_valulte' . get_lang()); ?>:
+                            </label>
+                            <span class="currenty">
                                         <?php echo do_shortcode('[woocommerce_currency_switcher_drop_down_box]'); ?>
                                     </span>
-                                </li>
-                                <li>
-                                    <div class="language-wpglobus">
-                                        <label> <i class="fa fa-globe"></i>
-											<?php echo carbon_get_theme_option('crb_language' . get_lang()); ?>:
-                                        </label>
-                                        <div class="select">
-											<?php if (!dynamic_sidebar('wpglobus')): ?>
-                                                <h4>language widget</h4>
-											<?php endif; ?>
-                                            <i class="fa fa-angle-down"></i>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                    <ul class="social_list">
-                        <li>
-                            <a target="_blank" href="https://www.pinterest.com/president2439/">
-                                <i class="fa fa-pinterest-square" aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a target="_blank" href="https://www.linkedin.com/in/benefisshopcom/">
-                                <i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a target="_blank" href="https://www.youtube.com/channel/UC4GDpzOuLCaKcn1x3xjllgA/videos">
-                                <i class="fa fa-youtube-square" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a target="_blank" href="https://twitter.com/benefisshop">
-                                <i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a target="_blank"
-                               href="https://www.instagram.com/explore/locations/1030092475/benefis-ballet-costumes/">
-                                <i class="fa fa-instagram" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a target="_blank" href="https://www.facebook.com/balletcostumesbenefis/">
-                                <i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                            <div class="language-wpglobus">
+                                <label>
+                                    <i class="fa fa-globe"></i>
+									<?php echo carbon_get_theme_option('crb_language' . get_lang()); ?>:
+                                </label>
+                                <div class="select">
+									<?php if (!dynamic_sidebar('wpglobus')): ?>
+                                        <h4>language widget</h4>
+									<?php endif; ?>
+                                    <i class="fa fa-angle-down"></i>
+                                </div>
+                            </div>
                         </li>
                     </ul>
-                    <ul class="pdf-list">
+                </nav>
+            </div>
+        </div>
+        <div class="header-top__item">
+            <ul class="social_list">
+                <li>
+                    <a target="_blank" href="https://www.pinterest.com/president2439/">
+                        <i class="fa fa-pinterest-square" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.linkedin.com/in/benefisshopcom/">
+                        <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.youtube.com/channel/UC4GDpzOuLCaKcn1x3xjllgA/videos">
+                        <i class="fa fa-youtube-square" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://twitter.com/benefisshop">
+                        <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank"
+                       href="https://www.instagram.com/explore/locations/1030092475/benefis-ballet-costumes/">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.facebook.com/balletcostumesbenefis/">
+                        <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul class="pdf-list">
+                <li>
+                    <a target="_blank"
+                       href="<?php echo carbon_get_theme_option('crb_pdf_file'); ?>"><?php echo carbon_get_theme_option('crb_pdf_title' . get_lang()); ?></a>
+                </li>
+            </ul>
+            <div class="single-menu">
+                <nav>
+                    <ul>
                         <li>
-                            <a target="_blank"
-                               href="<?php echo carbon_get_theme_option('crb_pdf_file'); ?>"><?php echo carbon_get_theme_option('crb_pdf_title' . get_lang()); ?></a>
+                            <a href="#"><?php echo carbon_get_theme_option('crb_enter' . get_lang()); ?></a>
+                        </li>
+                        <li>
+                            <a class="lastbdr"
+                               href="#"><?php echo carbon_get_theme_option('crb_registration' . get_lang()); ?></a>
                         </li>
                     </ul>
-                    <div class="single-menu">
-                        <nav>
-                            <ul>
-                                <li>
-                                    <a href="#"><?php echo carbon_get_theme_option('crb_enter' . get_lang()); ?></a>
-                                </li>
-                                <li>
-                                    <a class="lastbdr"
-                                       href="#"><?php echo carbon_get_theme_option('crb_registration' . get_lang()); ?></a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
+                </nav>
             </div>
         </div>
     </div>
@@ -136,11 +141,14 @@
 						<?php $phone_clear_2 = clear_phone($phone_2); ?>
 						<?php $phone_clear_3 = clear_phone($phone_3); ?>
 
-                        <a href="tel:<?php echo $phone_clear_1; ?>" class="phone"><i
+                        <a href="tel:<?php echo $phone_clear_1; ?>" class="phone">
+                            <i
                                     class="fa fa-phone"></i><?php echo $phone_1; ?></a>
-                        <a href="tel:<?php echo $phone_clear_2; ?>" class="phone"><i
+                        <a href="tel:<?php echo $phone_clear_2; ?>" class="phone">
+                            <i
                                     class="fa fa-phone"></i><?php echo $phone_2; ?></a>
-                        <a href="tel:<?php echo $phone_clear_3; ?>" class="phone"><i
+                        <a href="tel:<?php echo $phone_clear_3; ?>" class="phone">
+                            <i
                                     class="fa fa-phone"></i><?php echo $phone_3; ?></a>
 
                         <div class="email">
@@ -161,34 +169,62 @@
                 <div class="col-lg-2 col-md-3 hidden-sm col-xs-12">
                     <div class="shopping-cart expand">
 						<?php
-						$cart_url = '';
-						if (get_lang() === '_en') {
-							$cart_url = home_url() . '/en/cart/';
-						} elseif (get_lang() === '_ru') {
-							$cart_url = home_url() . '/ru/cart/';
+						//						$cart_url = '';
+						//						if (get_lang() === '_en') {
+						//							$cart_url = home_url() . '/en/cart/';
+						//						} elseif (get_lang() === '_ru') {
+						//							$cart_url = home_url() . '/ru/cart/';
+						//						} else {
+						//							$cart_url = home_url() . '/cart/';
+						//						}
+						//						?>
+                        <!--                        <a href="--><?php //echo $cart_url; ?><!--">-->
+                        <!--                            <span>-->
+                        <!--                               -->
+						<?php //echo carbon_get_theme_option('crb_basket' . get_lang()); ?><!-- (-->
+						<?php //echo WC()->cart->get_cart_contents_count(); ?><!--)-->
+                        <!--                            </span>-->
+                        <!--                        </a>-->
+						<?php
+
+						if (is_cart()) {
+							$class = 'current-menu-item';
 						} else {
-							$cart_url = home_url() . '/cart/';
+							$class = '';
 						}
 						?>
-                        <a href="<?php echo $cart_url; ?>">
-                            <span>
-                               <?php echo carbon_get_theme_option('crb_basket' . get_lang()); ?> (<?php echo WC()->cart->get_cart_contents_count(); ?>)
-                            </span>
-                        </a>
+                        <ul id="site-header-cart" class="site-header-cart menu">
+                            <li class="<?php echo esc_attr($class); ?>">
+                                <a class="cart-contents" href="<?php echo esc_url(wc_get_cart_url()); ?>"
+                                   title="<?php esc_attr_e('View your shopping cart', 'storefront'); ?>">
+									<?php /* translators: %d: number of items in cart */ ?>
+									<?php echo wp_kses_post(WC()->cart->get_cart_subtotal()); ?>
+                                    <span class="count"><?php echo wp_kses_data(sprintf(_n('%d item', '%d items', WC()->cart->get_cart_contents_count(), 'storefront'), WC()->cart->get_cart_contents_count())); ?></span>
+                                </a>
+                            </li>
+                            <li>
+								<?php the_widget('WC_Widget_Cart', 'title='); ?>
+                            </li>
+                        </ul>
+						<?php
+						?>
+
                         <div class="restrain small-cart-content">
-                            <p class="total cart_totals"> <?php echo carbon_get_theme_option('crb_summ' . get_lang()); ?>:
-                                <span class="amount">
-                                    <?php
-                                    global $woocommerce;
-                                    $amount = WC()->cart->get_cart_subtotal();
-                                    echo $amount;
-                                    ?>
-                                </span>
-                            </p>
-                            <p class="buttons">
-                                <a href="<?php echo $cart_url; ?>"
-                                   class="button"><?php echo carbon_get_theme_option('crb_to_cart' . get_lang()); ?></a>
-                            </p>
+                            <!--                            <p class="total cart_totals"> -->
+							<?php //echo carbon_get_theme_option('crb_summ' . get_lang()); ?><!--:-->
+                            <!--                                <span class="amount">-->
+                            <!--                                    --><?php
+							//                                    global $woocommerce;
+							//                                    $amount = WC()->cart->get_cart_subtotal();
+							//                                    echo $amount;
+							//                                    ?>
+                            <!--                                </span>-->
+                            <!--                            </p>-->
+                            <!--                            <p class="buttons">-->
+                            <!--                                <a href="--><?php //echo $cart_url; ?><!--"-->
+                            <!--                                   class="button">-->
+							<?php //echo carbon_get_theme_option('crb_to_cart' . get_lang()); ?><!--</a>-->
+                            <!--                            </p>-->
                         </div>
 
                     </div>

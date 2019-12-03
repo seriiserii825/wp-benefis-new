@@ -28,7 +28,7 @@ if (!defined('ABSPATH')) {
 
 			<?php if (!is_single()): ?>
 
-            <h2 class="products-section__title">Ready made products</h2>
+            <h2 class="products-section__title"><?php single_cat_title(); ?></h2>
 
             <div class="bs-products-loops">
 				<?php endif; ?>

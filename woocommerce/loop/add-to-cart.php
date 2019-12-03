@@ -53,20 +53,35 @@ if ($regular_price == "") {
 	foreach ($available_variations as $item) {
 		if ($item['attributes']['attribute_pa_type_custom'] == 'vzr') {
 			$adult_price = $item['display_price'];
-			$adult_regular_price = $item['display_regular_price'].' - ';
+			$adult_regular_price = $item['display_regular_price'];
 		}
 		if ($item['attributes']['attribute_pa_type_custom'] == 'child') {
 			$child_price = $item['display_price'];
-			$child_regular_price = $item['display_regular_price'].' - ';
+			$child_regular_price = $item['display_regular_price'];
 		}
 	}
+
+//	$adult_regular_price = round($adult_regular_price, 0).''.$symbol;
+//	$child_regular_price = round($child_regular_price, 0).''.$symbol;
+
+	if($adult_regular_price == $adult_price){
+		$adult_regular_price = '';
+	}else{
+		$adult_regular_price = round($adult_regular_price, 0).''.$symbol;
+	}
+	if($child_regular_price == $child_price){
+		$child_regular_price = '';
+	}else{
+		$child_regular_price = round($child_regular_price, 0).''.$symbol;
+	}
+
 	$adult_html = '';
 	$child_html = '';
 
 	if(!empty($adult_price)){
 		$adult_html = '<span class="price__item">
 							<span class="price__type">'.$product_adult.':</span>
-							<span class="price__regular">'.round($adult_regular_price, 0).''.$symbol.'</span>
+							<span class="price__regular">'.$adult_regular_price.'</span>
 							<span class="price__sale">'.round($adult_price, 0).''.$symbol.'</span>
 						</span>';
 	}
@@ -74,7 +89,7 @@ if ($regular_price == "") {
 	if(!empty($child_price)){
 		$child_html = '<span class="price__item">
 							<span class="price__type">'.$product_child.':</span>
-							<span class="price__regular">'.round($child_regular_price, 0).''.$symbol.'</span>
+							<span class="price__regular">'.$child_regular_price.'</span>
 							<span class="price__sale">'.round($child_price, 0).''.$symbol.'</span>
 						</span>';
 	}

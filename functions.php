@@ -301,7 +301,7 @@ add_filter('woocommerce_add_cart_item_data', 'plugin_republic_add_cart_item_data
 
 function plugin_republic_get_item_data($item_data, $cart_item_data)
 {
-	if (isset($cart_item_data['js-comment-area'])) {
+	if (isset($cart_item_data['js-comment-area']) && !empty($cart_item_data['js-comment-area'])) {
 		$key_field = carbon_get_theme_option('crb_comment_area'.get_lang());
 		$item_data[] = array(
 			'key' => $key_field,
@@ -310,7 +310,7 @@ function plugin_republic_get_item_data($item_data, $cart_item_data)
 	}
 
 	for ($i = 1; $i <= 28; $i++) {
-		if (isset($cart_item_data['rz' . $i])) {
+		if (isset($cart_item_data['rz' . $i]) && !empty($cart_item_data['rz' . $i])) {
 			$key_field = carbon_get_theme_option('crb_rz' . $i . get_lang());
 			$item_data[] = array(
 				'key' => $key_field,
